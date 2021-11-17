@@ -1,6 +1,6 @@
-import { AppBar, Button, Toolbar } from "@material-ui/core";
+import { AppBar, Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
-
+import HeaderButton from "./HeaderButton";
 import React from "react";
 
 const useStyles = makeStyles(() => ({
@@ -11,18 +11,8 @@ const useStyles = makeStyles(() => ({
 
  const displayDesktop = () => {
     return <Toolbar>
-        <Button style={{
-            backgroundColor: '#009688',
-            color: 'white',
-            margin: '1em'
-        }} 
-        variant="contained" href="#">Reserver bord</Button>
-      <Button style={{
-            backgroundColor: '#009688',
-            color: 'white',
-            margin: '1em'
-        }} 
-        variant="contained" href="#">Meny</Button>
+        <HeaderButton text="Reserver bord"></HeaderButton>
+        <HeaderButton text="Meny"></HeaderButton>
     </Toolbar>;
   };
 
