@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import HeaderButton from "./HeaderButton";
 import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
 import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from "react";
 
 const useStyles = makeStyles(() => ({
@@ -15,6 +16,9 @@ const useStyles = makeStyles(() => ({
     return <Toolbar>
         <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord"></HeaderButton>
         <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
+        <ShoppingCartOutlinedIcon fontSize="large" style={{
+          color: 'black',
+        }}/>
     </Toolbar>;
   };
 
