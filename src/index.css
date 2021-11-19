@@ -1,1 +1,10 @@
+@import-normalize;
 
+* {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    border-style: none;
+}
+
+/* rest of app styles */

@@ -5,12 +5,14 @@ import Card from "@mui/material/Card";
 
 const useStyles = makeStyles(() => ({
 	pizzaItem: {
-		position: "absolute",
+		position: "relative",
 		top: "7rem",
 		left: "10rem",
 		display: "grid",
+		justifyContent: "flex-start",
 	},
 }));
+
 
 
 const PizzaItem = (props) => {
@@ -25,7 +27,7 @@ const PizzaItem = (props) => {
 						image={props.img}
 						alt="margarita-pizza"
 						component="img"
-						height="350"
+						height="300"
 					/>
 					<p>{props.price}</p>
 					<Button style={{
