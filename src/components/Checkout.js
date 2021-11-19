@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonGroup, Card, CardActionArea, CardContent, CardHeader, CardMedia, Divider, Drawer, FormControl, Input, InputLabel } from '@material-ui/core';
+import { ButtonGroup, Card, CardContent, CardHeader, CardMedia, Divider, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import HeaderButton from './HeaderButton';
 import InputField from './InputField';
 
@@ -72,7 +72,46 @@ function Checkout() {
                         <InputField type="string" placeholder="Poststed"></InputField>
                     </FormControl>
                     <Divider variant="middle"></Divider>
-
+                    <div style={{
+                        position: 'relative',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignContent: 'space-evenly', 
+                        margin: '1rem'
+                    }}>
+                        <div style={{
+                        flexDirection: 'column',
+                    }}>
+                        <ul style={{
+                            fontWeight: 'bold',
+                            listStyle: 'none',
+                        }}>
+                            <li>Subtotal: </li>
+                            <li>Frakt: </li>
+                            <li>Tips: </li>
+                            <li>Total: </li>
+                        </ul>
+                        </div>
+                        <div style={{
+                        flexDirection: 'column',
+                    }}>
+                        <FormControl component="fieldset">
+                            <RadioGroup defaultValue="female" name="radio-buttons-group">
+                            <FormControlLabel value="VISA" control={<Radio />} label="VISA" />
+                            <FormControlLabel value="Vipps" control={<Radio />} label="Vipps" />
+                            <FormControlLabel value="Paypal" control={<Radio />} label="Paypal" />
+                            </RadioGroup>
+                        </FormControl>
+                        </div>
+                        <div style={{
+                        flexDirection: 'column',
+                    }}>
+                        <InputField type="number" placeholder="Kortnummer"></InputField>
+                        <InputField type="string" placeholder="Navn på kortholder"></InputField>
+                        <InputField type="string" placeholder="Utløp"></InputField>
+                        <InputField type="number" placeholder="CVC"></InputField>
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
         </div>
