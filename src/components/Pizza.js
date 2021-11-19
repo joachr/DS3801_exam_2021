@@ -6,11 +6,9 @@ const useStyles = makeStyles(() => ({
 	pizzaPrint: {
 		position: "relative",
 		display: "flex",
-		flexDirection: "row",
-		alignItems: "center",
+		flexWrap: "wrap",
 		width: "100%",
 		height: "100vh",
-		justifyContent: "space-evenly",
 	},
 }));
 
@@ -24,6 +22,7 @@ const Pizza = (props) => {
 					<PizzaItem
 						title={pizza.title}
 						price={pizza.price}
+						ingredients={pizza.ingredients}
 						img={pizza.image}/>
 				))}
 		</div>

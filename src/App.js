@@ -10,21 +10,37 @@ const INITIAL_PIZZAS = [
   {
     title: "Margarita",
     image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
     price: "199",
   },
   {
     title: "Margarita",
     image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
     price: "199",
   },
   {
     title: "Margarita",
     image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
     price: "199",
   },
   {
     title: "Margarita",
     image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
+    price: "199",
+  },
+  {
+    title: "Margarita",
+    image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
+    price: "199",
+  },
+  {
+    title: "Margarita",
+    image: pizzaImage,
+    ingredients: "ost, tomatsaus, basilikum",
     price: "199",
   },
 ];
