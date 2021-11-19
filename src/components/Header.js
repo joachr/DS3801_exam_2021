@@ -13,11 +13,17 @@ const useStyles = makeStyles(() => ({
  }));
 
  const displayDesktop = () => {
-    return <Toolbar>
+    return <Toolbar style={{
+      position: 'relative',
+      alignItems: 'right',
+      justifyContent: 'right'
+    }}>
         <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord"></HeaderButton>
         <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
         <ShoppingCartOutlinedIcon fontSize="large" style={{
           color: 'black',
+          marginLeft: '0.5em',
+          marginRight: '0.5em'
         }}/>
     </Toolbar>;
   };
@@ -25,9 +31,9 @@ const useStyles = makeStyles(() => ({
 function Header() {
     const { header } = useStyles();
   return (
-    <header>
+    <div>
       <AppBar className={header}>{displayDesktop()}</AppBar>
-    </header>
+    </div>
   );
 }
 
