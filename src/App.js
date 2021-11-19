@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header.js';
+import Checkout from './components/Checkout';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import pizzaImage from './components/images/margarita.jpeg'
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <Header/>
       <Pizza items={pizzas}/>
+      <Checkout/>
     </div>
   );
 }
