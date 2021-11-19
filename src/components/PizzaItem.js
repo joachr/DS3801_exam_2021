@@ -1,5 +1,5 @@
 import React from "react";
-import {CardMedia, makeStyles} from "@material-ui/core";
+import {Button, CardMedia, makeStyles} from "@material-ui/core";
 import Card from "@mui/material/Card";
 
 
@@ -21,14 +21,18 @@ const PizzaItem = (props) => {
 			<div className={pizzaItem}>
 				<Card>
 					<h2>{props.title}</h2>
-					<p>{props.price}</p>
 					<CardMedia
 						image={props.img}
 						alt="margarita-pizza"
 						component="img"
-						height="180"
-						width="50"
+						height="350"
 					/>
+					<p>{props.price}</p>
+					<Button style={{
+						backgroundColor: '#009688',
+						color: 'white',
+						margin: '1em',
+					}}>Legg til</Button>
 				</Card>
 			</div>
 	);
