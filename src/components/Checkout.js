@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonGroup, Card, CardActionArea, CardContent, CardHeader, CardMedia, Divider, Drawer, FormControl, Input, InputLabel } from '@material-ui/core';
 import HeaderButton from './HeaderButton';
+import InputField from './InputField';
 
 function Checkout() {
     return (
@@ -34,39 +35,9 @@ function Checkout() {
                         alignItems: 'center',
                         margin: '1rem'
                     }}>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="string"
-                        required="true"
-                        placeholder="Fullt navn"/>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="string"
-                        required="true"
-                        placeholder="E-post"/>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="string"
-                        required="true"
-                        placeholder="Telefonnummer"/>
+                    <InputField type="string" placeholder="Fullt navn"></InputField>
+                    <InputField type="number" placeholder="Telefonnummer"></InputField>
+                    <InputField type="string" placeholder="E-post"></InputField> 
                     </FormControl>
                     <Divider variant="middle"></Divider>
                     <ButtonGroup style={{
@@ -96,42 +67,12 @@ function Checkout() {
                         alignItems: 'center',
                         margin: '1rem'
                     }}>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="string"
-                        required="true"
-                        placeholder="Gate"/>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="number"
-                        required="true"
-                        placeholder="Postnummer"/>
-                        <Input style={{
-                            width: '55%',
-                            marginTop: '1rem',
-                            marginBottom: '1rem',
-                            padding: '0.3rem',
-                            backgroundColor: 'white',
-                            borderRadius: '5px',
-                        }}
-                        typeof="string"
-                        required="true"
-                        placeholder="Poststed"/>
+                        <InputField type="string" placeholder="Gate"></InputField>
+                        <InputField type="number" placeholder="Postnummer"></InputField>
+                        <InputField type="string" placeholder="Poststed"></InputField>
                     </FormControl>
                     <Divider variant="middle"></Divider>
-                    
+
                 </CardContent>
             </Card>
         </div>
