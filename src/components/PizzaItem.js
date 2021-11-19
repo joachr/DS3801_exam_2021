@@ -7,9 +7,6 @@ const useStyles = makeStyles(() => ({
 	pizzaItem: {
 		position: "relative",
 		top: "7rem",
-		left: "10rem",
-		display: "grid",
-		justifyContent: "flex-start",
 	},
 }));
 
@@ -27,7 +24,7 @@ const PizzaItem = (props) => {
 						image={props.img}
 						alt="margarita-pizza"
 						component="img"
-						height="300"
+						height="350"
 					/>
 					<p>{props.price}</p>
 					<Button style={{
