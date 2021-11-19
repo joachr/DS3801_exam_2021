@@ -4,10 +4,14 @@ import Checkout from './components/Checkout';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import pizzaImage from './components/images/margarita.jpeg'
-import {makeStyles} from "@material-ui/core";
 
 
 const INITIAL_PIZZAS = [
+  {
+    title: "Margarita",
+    image: pizzaImage,
+    price: "199",
+  },
   {
     title: "Margarita",
     image: pizzaImage,
@@ -32,7 +36,7 @@ function App() {
     <div>
       <Header/>
       <Pizza items={pizzas}/>
-      <Checkout/>
+      {/*<Checkout/>*/}
     </div>
   );
 }
