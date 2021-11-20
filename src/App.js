@@ -53,9 +53,10 @@ function App() {
   return (
     <div>
      
-      <Header /> 
+      <Header />
+      <Pizza items={pizzas}/>
       <Checkout />
-      <BasicModal></BasicModal>
+      <BasicModal/>
       <Footer />
       
     </div>

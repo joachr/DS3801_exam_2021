@@ -25,13 +25,10 @@ const PizzaItem = (props) => {
 	  setCounter(counter + 1);
 	};
 	const decrementCounter = () => {
-		setCounter(counter - 1);
+		if (counter >= 2) {
+			setCounter(counter - 1);
+		}
 	};
-
-	// console log fungerer og passer rett value wtf
-	console.log(counter)
-
-	//FIXME rune: funker ikke enda, er det pga state?? Number oppdateres ikke
 
 	return (
 			<div className={pizzaItem}>
@@ -62,15 +59,13 @@ const PizzaItem = (props) => {
 						<Button onClick={decrementCounter} id={"subtract-amount-button"} size={"small"} style={{
 							backgroundColor: '#009688',
 							color: 'white'}}>-</Button>
-						<Input type={"number"} readOnly={"readonly"} min={1} size={"small"} style={{
+						<span style={{
 							backgroundColor: '#009688',
 							color: 'white',
-							width: "10%",
-							borderRadius: "10%",
-							//FIXME rune: funker ikke å få fjerna lille linja enda som animerer når en klikker i inputet
-							outline: "none",
-							appearance: "none",
-						}}>{counter}</Input>
+							width: "2rem",
+							display: "flex",
+							justifyContent: "center",
+						}}>{counter}</span>
 						<Button onClick={incrementCounter} size={"small"} style={{
 							backgroundColor: '#009688',
 							color: 'white'}}>+</Button>
