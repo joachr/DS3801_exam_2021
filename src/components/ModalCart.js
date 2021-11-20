@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import pizzaImage from './images/margarita.jpeg'
+
 
 
 const style = {
@@ -11,11 +13,12 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 800,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  display: 'column',
 };
 
 export default function BasicModal() {
@@ -34,16 +37,59 @@ export default function BasicModal() {
       >
         <Box sx={style}>
         <ShoppingCartOutlinedIcon fontSize="large" style={{
-            color: 'black',
-            marginLeft: '0.1em',
-            marginRight: '0.1em'
+            color: 'black'
           }}/>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          
+          <div style={{paddingTop: '30px'}}>
+
+          <img style={{ width: "200px"}} src={pizzaImage} />
+
+          
+          <Typography fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Margarita 
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          
+          <div style={{position: 'absolute', left: '500px', top:'180px'}}>
+            <span style={{
+							backgroundColor: '#009688',
+							color: 'white',
+							width: "6rem",
+              height: "4rem",
+							display: "flex",
+              justifyContent: "center",
+              }}>{1}</span>
+          </div>
+          <Typography style={{paddingTop: '30px'}} fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Ost, tomatsaus, basilikum 
           </Typography>
+          
+          <Typography style={{paddingTop: '30px'}} fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Liten 
+          </Typography>
+       
+          <Typography>--------------------------------------</Typography>
+          
+          </div>
+
+
+          <div style={{paddingTop: '30px'}}>
+
+          <img style={{ width: "200px"}} src={pizzaImage} />
+
+          <Typography fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Margarita 
+          </Typography>
+          
+          <Typography style={{paddingTop: '30px'}} fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Ost, tomatsaus, basilikum 
+          </Typography>
+          
+          <Typography style={{paddingTop: '30px'}} fontSize="large" fontWeight="bold" id="modal-modal-description">
+          Liten 
+          </Typography>
+          
+          </div>
+          
         </Box>
       </Modal>
     </div>
