@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Typography from '@material-ui/core/Typography'
 
 function PriceTotalList( { tips, frakt }) {
 
     return (
-        <div style={{
+        <Typography style={{
             width: '40%'
         }}>
             <ul style={{
                 fontWeight: 'bold',
+                opacity: '75%',
                 listStyle: 'none',
-                fontSize: 'large'
+                fontSize: 'large',
+                letterSpacing: '0.15rem'
             }}>
                 <li style={{
                 margin: '0.2rem'
@@ -24,7 +27,7 @@ function PriceTotalList( { tips, frakt }) {
                 margin: '0.2rem'
                 }}>Total: </li>
             </ul>
-        </div>
+        </Typography>
     )
 }
 
