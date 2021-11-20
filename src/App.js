@@ -4,6 +4,7 @@ import Checkout from './components/checkoutComponents/Checkout';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import pizzaImage from './components/images/margarita.jpeg'
+import Footer from './components/Footer';
 
 
 const INITIAL_PIZZAS = [
@@ -50,8 +51,9 @@ function App() {
 
   return (
     <div>
-      <Header/>
-      <Checkout/>
+      <Header />
+      <Checkout />
+      <Footer />
     </div>
   );
 }
