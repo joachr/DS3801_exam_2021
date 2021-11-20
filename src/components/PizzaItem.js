@@ -26,11 +26,11 @@ const useStylesButtons = makeStyles(() => ({
 
 const useStyleText = makeStyles(() => ({
 	textElements: {
-/*		position: "absolute",
+		position: "relative",
 		flexWrap: "wrap",
 		flexDirection: "column",
 		bottom: "2rem",
-		right: "20px",*/
+		right: "20px",
 	}
 }));
 
