@@ -1,4 +1,4 @@
-import { BottomNavigation, BottomNavigationAction, Paper } from '@material-ui/core';
+import { BottomNavigation, Paper } from '@material-ui/core';
 import { Box } from '@mui/system';
 import React from 'react';
 
@@ -24,7 +24,6 @@ function Footer() {
                                 listStyle: 'none',
                                 color: 'white',
                                 fontSize: 'large',
-                                fontFamily: 'Zen Maru Gothic'
                             }}>
                             <li style={{
                                 marginTop: '0.5rem'

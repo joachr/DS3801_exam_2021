@@ -32,7 +32,6 @@ function Checkout() {
                 alignItems: 'center',
                 maxWidth: 'md',
                 height: '80rem',
-                fontFamily: 'Zen Maru Gothic'
         }}>
             <Card style={{
                 position: 'inherit',
@@ -84,7 +83,6 @@ function Checkout() {
                             fontWeight: 'bold',
                             marginTop: '1rem',
                             marginLeft: '1rem',
-                            fontFamily: 'Zen Maru Gothic' 
                         }}>Tips til bud:</p>
                         <ButtonGroup style={{
                         }}>
