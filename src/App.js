@@ -20,6 +20,9 @@ const theme = createTheme({
   typography: {
     fontFamily: font,
   },
+  button: {
+    textTransform: "none",
+  }
 });
 
 

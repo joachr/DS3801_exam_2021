@@ -18,19 +18,27 @@ const useStylePizzaItem = makeStyles(() => ({
 const useStylesButtons = makeStyles(() => ({
 	buttonElements: {
 		position: "relative",
-		display: "flex",
-		top: "6rem",
-		right: "12rem",
+		top: "10rem",
+		right: "2rem",
 	},
 }));
 
 const useStyleText = makeStyles(() => ({
 	textElements: {
-		position: "relative",
-		flexWrap: "wrap",
+		position: "absolute",
 		flexDirection: "column",
-		bottom: "2rem",
-		right: "20px",
+		width: "45%",
+		height: "55%",
+		bottom: "8rem",
+		left: "16rem",
+	}
+}));
+
+const useStylePrice = makeStyles(() => ({
+	priceElement: {
+		position: "absolute",
+		top: "-2rem",
+		left: "3rem",
 	}
 }));
 
@@ -39,6 +47,7 @@ const PizzaItem = (props) => {
 	const { pizzaItem } = useStylePizzaItem();
 	const { buttonElements } = useStylesButtons();
 	const { textElements } = useStyleText();
+	const { priceElement } = useStylePrice();
 
 	const [counter, setCounter] = useState(1);
 
@@ -53,7 +62,7 @@ const PizzaItem = (props) => {
 
 	return (
 			<div className={pizzaItem}>
-				<Card style={{padding: "1rem", margin: "1rem", display: "flex"}}>
+				<Card style={{padding: "1rem", margin: "1rem", display: "flex", position: "relative"}} sx={{ maxWidth: 580 }}>
 					<CardMedia
 						image={props.img}
 						alt="margarita-pizza"
@@ -62,19 +71,21 @@ const PizzaItem = (props) => {
 						style={{width: "50%"}}
 					/>
 					<div className={textElements}>
-						<CardContent>
+						<CardContent style={{maxHeight: "300px"}}>
 								<Typography gutterBottom variant="h4" component="div">
 									{props.title}
 								</Typography>
 								<Typography style={{fontSize: "17px"}} variant="body2" color="text.secondary" component={"div"}>
 									{props.ingredients}
 								</Typography>
-								<Typography style={{fontWeight: "bold", fontSize: "30px"}}>
-									kr. {props.price},-
-								</Typography>
 						</CardContent>
 					</div>
 					<div className={buttonElements}>
+						<div className={priceElement}>
+							<Typography style={{fontWeight: "bold", fontSize: "30px"}}>
+								kr. {props.price},-
+							</Typography>
+						</div>
 						<CardActions>
 							<Button size={"medium"} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
