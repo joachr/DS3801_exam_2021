@@ -1,21 +1,25 @@
 import React from 'react'
-import { ButtonGroup, Card, CardContent, CardHeader, CardMedia, Divider, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
-import HeaderButton from './HeaderButton';
+import { ButtonGroup, Card, CardContent, CardHeader, CardMedia, Container, Divider, FormControl } from '@material-ui/core';
+import HeaderButton from '../HeaderButton';
 import InputField from './InputField';
+import Payment from './Payment';
 
 function Checkout() {
     return (
-        <div style={{
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
+        <Container style={{
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                maxWidth: 'md',
+                height: '80rem'
         }}>
             <Card style={{
+                position: 'inherit',
                 width: '30rem',
                 backgroundColor: '#FFD148',
             }} 
-            variant='elevation'>
+            open="true">
                 <CardContent>
                     <Card style={{
                         margin: '1rem'
@@ -72,49 +76,17 @@ function Checkout() {
                         <InputField type="string" placeholder="Poststed"></InputField>
                     </FormControl>
                     <Divider variant="middle"></Divider>
+                    <Payment></Payment>
                     <div style={{
-                        position: 'relative',
                         display: 'flex',
-                        flexDirection: 'row',
-                        alignContent: 'space-evenly', 
-                        margin: '1rem'
+                        justifyContent: 'center',
+                        alignItems: 'center',
                     }}>
-                        <div style={{
-                        flexDirection: 'column',
-                    }}>
-                        <ul style={{
-                            fontWeight: 'bold',
-                            listStyle: 'none',
-                        }}>
-                            <li>Subtotal: </li>
-                            <li>Frakt: </li>
-                            <li>Tips: </li>
-                            <li>Total: </li>
-                        </ul>
-                        </div>
-                        <div style={{
-                        flexDirection: 'column',
-                    }}>
-                        <FormControl component="fieldset">
-                            <RadioGroup defaultValue="female" name="radio-buttons-group">
-                            <FormControlLabel value="VISA" control={<Radio />} label="VISA" />
-                            <FormControlLabel value="Vipps" control={<Radio />} label="Vipps" />
-                            <FormControlLabel value="Paypal" control={<Radio />} label="Paypal" />
-                            </RadioGroup>
-                        </FormControl>
-                        </div>
-                        <div style={{
-                        flexDirection: 'column',
-                    }}>
-                        <InputField type="number" placeholder="Kortnummer"></InputField>
-                        <InputField type="string" placeholder="Navn på kortholder"></InputField>
-                        <InputField type="string" placeholder="Utløp"></InputField>
-                        <InputField type="number" placeholder="CVC"></InputField>
-                        </div>
+                    <HeaderButton text="Betal"></HeaderButton>
                     </div>
                 </CardContent>
             </Card>
-        </div>
+        </Container>
     )
 }
 

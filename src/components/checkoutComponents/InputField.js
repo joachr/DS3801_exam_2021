@@ -8,13 +8,13 @@ function InputField({type, placeholder}) {
         }}>
             <Input 
                 style={{
-                    marginTop: '1rem',
-                    marginBottom: '1rem',
-                    padding: '0.3rem',
+                    marginTop: '0.5rem',
+                    marginBottom: '0.5rem',
+                    padding: '0.2rem',
                     backgroundColor: 'white',
                     borderRadius: '5px',
                 }}
-                typeof={type}
+                type={type}
                 required="true"
                 placeholder={placeholder}/>
         </div>
