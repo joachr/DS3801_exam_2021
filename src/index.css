@@ -25,6 +25,11 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    background-image: url("./components/images/pizza-background-image.png");
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 article,aside,details,figcaption,figure,
