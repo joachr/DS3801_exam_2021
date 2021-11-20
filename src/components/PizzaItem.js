@@ -12,10 +12,10 @@ const useStylePizzaItem = makeStyles(() => ({
 		top: "10rem",
 		marginBottom: "2rem",
 		boxSizing: "border-box",
-		"&:hover": {
+/*		"&:hover": {
 			transition: "transform .1s ease",
 			transform: "scale(1.01)",
-		}
+		}*/
 	},
 }));
 
