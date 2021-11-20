@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+
 
 const style = {
   position: 'absolute',
@@ -31,6 +33,11 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <ShoppingCartOutlinedIcon fontSize="large" style={{
+            color: 'black',
+            marginLeft: '0.1em',
+            marginRight: '0.1em'
+          }}/>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal
           </Typography>
