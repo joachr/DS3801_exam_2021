@@ -18,16 +18,17 @@ const useStylePizzaItem = makeStyles(() => ({
 const useStylesButtons = makeStyles(() => ({
 	buttonElements: {
 		position: "relative",
-		top: "10rem",
-		right: "2rem",
+		top: "12rem",
+		right: "1rem",
 	},
 }));
 
 const useStyleText = makeStyles(() => ({
 	textElements: {
 		position: "absolute",
-		flexDirection: "column",
-		width: "45%",
+		display: "flex",
+		textAlign: "right",
+		width: "55%",
 		height: "55%",
 		bottom: "8rem",
 		left: "16rem",
@@ -37,8 +38,8 @@ const useStyleText = makeStyles(() => ({
 const useStylePrice = makeStyles(() => ({
 	priceElement: {
 		position: "absolute",
-		top: "-2rem",
-		left: "3rem",
+		top: "-3rem",
+		left: "13rem",
 	}
 }));
 
@@ -82,31 +83,26 @@ const PizzaItem = (props) => {
 					</div>
 					<div className={buttonElements}>
 						<div className={priceElement}>
-							<Typography style={{fontWeight: "bold", fontSize: "30px"}}>
+							<Typography style={{fontWeight: "bold", fontSize: "27px"}}>
 								kr. {props.price},-
 							</Typography>
 						</div>
 						<CardActions>
-							<Button size={"medium"} id={"add-to-card-button"} style={{
+							<Button onClick={decrementCounter} size={"small"} variant={"outlined"}>-</Button>
+							<span style={{
+								width: "2rem",
+								display: "flex",
+								justifyContent: "center",
+								fontWeight: "bold",
+								fontSize: "20px",
+							}}>{counter}</span>
+							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
+							<Button id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
+								width: "6rem",
 							}}>Legg til</Button>
-							<Button onClick={decrementCounter} size={"small"} style={{
-								backgroundColor: '#009688',
-								color: 'white'}}>-</Button>
-							<span style={{
-								backgroundColor: '#009688',
-								color: 'white',
-								width: "3rem",
-								display: "flex",
-								justifyContent: "center",
-								borderRadius: "10%",
-								fontSize: "larger",
-							}}>{counter}</span>
-							<Button onClick={incrementCounter} size={"small"} style={{
-								backgroundColor: '#009688',
-								color: 'white'}}>+</Button>
 						</CardActions>
 					</div>
 				</Card>
