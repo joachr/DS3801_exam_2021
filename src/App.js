@@ -3,7 +3,8 @@ import Header from './components/Header.js';
 import Checkout from './components/Checkout';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
-import pizzaImage from './components/images/margarita.jpeg'
+import pizzaImage from './components/images/margarita.jpeg';
+import BasicModal from './components/ModalCart';
 
 
 const INITIAL_PIZZAS = [
@@ -52,6 +53,7 @@ function App() {
     <div>
       <Header/>
       <Pizza items={pizzas}/>
+      <BasicModal></BasicModal>
       {/*<Checkout/>*/}
     </div>
   );
