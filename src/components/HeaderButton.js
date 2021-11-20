@@ -1,7 +1,7 @@
 import { Button } from "@material-ui/core";
 import React from 'react'
 
-function HeaderButton({text, icon}) {
+function HeaderButton({text, icon, click}) {
     return (
         <div>
             <Button style={{
@@ -9,7 +9,7 @@ function HeaderButton({text, icon}) {
             color: 'white',
             margin: '1em',
         }} 
-        variant="contained" href="#" startIcon={ icon }>{ text }</Button>
+        variant="contained" href="#" onClick={ click } startIcon={ icon }>{ text }</Button>
         </div>
     )
 }

@@ -2,14 +2,14 @@ import React from 'react';
 import PriceTotalList from './PriceTotalList';
 import ChoosePayment from './ChoosePayment';
 
-function Payment() {
+function Payment({ tipss, fraktt }) {
     return (
         <div style={{
             display: 'flex',
             margin: '1rem',
             flexDirection: 'row'
         }}>
-            <PriceTotalList />
+            <PriceTotalList tips={ tipss } frakt={ fraktt }/>
             <ChoosePayment />
         </div>
     )
