@@ -1,4 +1,4 @@
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar, Badge, Fab, Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import HeaderButton from "./HeaderButton";
 import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
@@ -20,11 +20,23 @@ const useStyles = makeStyles(() => ({
     }}>
         <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord"></HeaderButton>
         <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
-        <ShoppingCartOutlinedIcon fontSize="large" style={{
-          color: 'black',
-          marginLeft: '0.5em',
-          marginRight: '0.5em'
-        }}/>
+       
+        <Badge  
+        anchorOrigin={{vertical: 'bottom', horizontal: 'left',}}
+        color="secondary" 
+        overlap="circular" 
+        badgeContent="5">
+
+        <Fab style={{ backgroundColor: '#009688' }}>
+          <ShoppingCartOutlinedIcon fontSize="large" style={{
+            color: 'black',
+            marginLeft: '0.5em',
+            marginRight: '0.5em'
+          }}/>
+        </Fab>
+
+        </Badge>
+   
     </Toolbar>;
   };
 

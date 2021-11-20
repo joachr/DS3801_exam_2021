@@ -1,9 +1,11 @@
 import './App.css';
 import Header from './components/Header.js';
-import Checkout from './components/Checkout';
+import Checkout from './components/checkoutComponents/Checkout';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import pizzaImage from './components/images/margarita.jpeg'
+import Footer from './components/Footer';
+import BasicModal from './components/ModalCart';
 
 
 const INITIAL_PIZZAS = [
@@ -50,9 +52,13 @@ function App() {
 
   return (
     <div>
-      <Header/>
+     
+      <Header />
       <Pizza items={pizzas}/>
-      {/*<Checkout/>*/}
+      <Checkout />
+      <BasicModal/>
+      <Footer />
+      
     </div>
   );
 }
