@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
 		position: "relative",
 		display: "flex",
 		flexWrap: "wrap",
-		width: "95%",
+		width: "100%",
 	},
 }));
 

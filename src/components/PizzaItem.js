@@ -8,17 +8,21 @@ const useStylePizzaItem = makeStyles(() => ({
 	pizzaItem: {
 		position: "relative",
 		display: "flex",
-		flex: "1 1",
-		top: "7rem",
-		marginBottom: "6rem",
-		flexBasis: "30%",
+		flex: "1 1 auto",
+		top: "10rem",
+		marginBottom: "2rem",
+		boxSizing: "border-box",
+		"&:hover": {
+			transition: "transform .1s ease",
+			transform: "scale(1.01)",
+		}
 	},
 }));
 
 const useStylesButtons = makeStyles(() => ({
 	buttonElements: {
 		position: "relative",
-		top: "12rem",
+		top: "11rem",
 		right: "1rem",
 	},
 }));
@@ -38,8 +42,17 @@ const useStyleText = makeStyles(() => ({
 const useStylePrice = makeStyles(() => ({
 	priceElement: {
 		position: "absolute",
-		top: "-3rem",
-		left: "13rem",
+		top: "-2rem",
+		left: "200px",
+	}
+}));
+
+const useStyleCard = makeStyles(() => ({
+	cardElement: {
+		display: "flex",
+		position: "relative",
+		padding: "1rem",
+		margin: "1rem",
 	}
 }));
 
@@ -49,6 +62,7 @@ const PizzaItem = (props) => {
 	const { buttonElements } = useStylesButtons();
 	const { textElements } = useStyleText();
 	const { priceElement } = useStylePrice();
+	const { cardElement } = useStyleCard();
 
 	const [counter, setCounter] = useState(1);
 
@@ -63,7 +77,7 @@ const PizzaItem = (props) => {
 
 	return (
 			<div className={pizzaItem}>
-				<Card style={{padding: "1rem", margin: "1rem", display: "flex", position: "relative"}} sx={{ maxWidth: 580 }}>
+				<Card className={cardElement} sx={{ maxWidth: 580 }}>
 					<CardMedia
 						image={props.img}
 						alt="margarita-pizza"
@@ -84,7 +98,7 @@ const PizzaItem = (props) => {
 					<div className={buttonElements}>
 						<div className={priceElement}>
 							<Typography style={{fontWeight: "bold", fontSize: "27px"}}>
-								kr. {props.price},-
+								{props.price},-
 							</Typography>
 						</div>
 						<CardActions>
@@ -97,7 +111,7 @@ const PizzaItem = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button id={"add-to-card-button"} style={{
+							<Button size={"large"} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
