@@ -3,6 +3,10 @@ import { FormControl, FormControlLabel, Radio, RadioGroup } from '@material-ui/c
 import PaymentInfoInput from './PaymentInfoInput';
 
 function ChoosePayment() {
+    const [disabled, setDisabled] = React.useState(false);
+    const makeDisabled = () => setDisabled(true);
+    const makeNotDisabled = () => setDisabled(false);
+
     return (
         <div style={{
             display: 'flex',
@@ -13,18 +17,18 @@ function ChoosePayment() {
                 marginRight: '1rem', 
             }}>
                 <RadioGroup defaultValue="VISA" name="radio-buttons-group">
-                    <FormControlLabel value="VISA" control={<Radio />} label="VISA" />
-                    <FormControlLabel value="Vipps" control={<Radio />} label="Vipps" />
-                    <FormControlLabel value="Paypal" control={<Radio />} label="Paypal" />
+                    <FormControlLabel value="VISA" control={<Radio onChange={ makeNotDisabled }/>} label="VISA" />
+                    <FormControlLabel value="Vipps" control={<Radio onChange={ makeDisabled }/>} label="Vipps" />
+                    <FormControlLabel value="Paypal" control={<Radio onChange={ makeDisabled }/>} label="Paypal" />
                 </RadioGroup>
             </FormControl>
             <FormControl style={{
                 marginLeft: '1rem'
-            }}>
-                <PaymentInfoInput type="number" placeholder="Kortnummer"/>
-                <PaymentInfoInput type="string" placeholder="Navn på kortholder"/>
-                <PaymentInfoInput type="string" placeholder="Utløp"/>
-                <PaymentInfoInput type="number" placeholder="CVC"/>
+            }} disabled={disabled}>
+                <PaymentInfoInput type="number" placeholder="Kortnummer"  required/>
+                <PaymentInfoInput type="string" placeholder="Navn på kortholder" required/>
+                <PaymentInfoInput type="string" placeholder="Utløp" required/>
+                <PaymentInfoInput type="number" placeholder="CVC" required/>
             </FormControl>
         </div>
     )

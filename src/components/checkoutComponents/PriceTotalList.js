@@ -1,6 +1,7 @@
 import React from 'react'
 
-function PriceTotalList() {
+function PriceTotalList( { tips, frakt }) {
+
     return (
         <div style={{
             width: '40%'
@@ -8,16 +9,17 @@ function PriceTotalList() {
             <ul style={{
                 fontWeight: 'bold',
                 listStyle: 'none',
+                fontSize: 'large'
             }}>
                 <li style={{
                 margin: '0.2rem'
                 }}>Subtotal: </li>
                 <li style={{
                 margin: '0.2rem'
-                }}>Frakt: </li>
+                }}>Frakt: { frakt }</li>
                 <li style={{
                 margin: '0.2rem'
-                }}>Tips: </li>
+                }} >Tips: { tips }</li>
                 <li style={{
                 margin: '0.2rem'
                 }}>Total: </li>
