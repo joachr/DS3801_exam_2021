@@ -2,12 +2,13 @@ import PizzaItem from "./PizzaItem.js";
 import {makeStyles} from "@material-ui/core";
 
 
+
 const useStyles = makeStyles(() => ({
 	pizzaPrint: {
 		position: "relative",
 		display: "flex",
 		flexWrap: "wrap",
-		width: "100%",
+		width: "95%",
 	},
 }));
 

@@ -25,7 +25,7 @@ time, mark, audio, video {
 
 body {
     line-height:1;
-    background-image: url("./components/images/pizza-background-image.png");
+    background-image: url("components/assets/images/pizza-background-image.png");
     background-attachment: fixed;
     background-size: cover;
     overflow-y: scroll;

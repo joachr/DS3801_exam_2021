@@ -1,39 +1,38 @@
 import React, {useState} from "react";
+import '../components/assets/css/fonts.css'
 import {Button, CardActions, CardContent, CardMedia, makeStyles, Typography} from "@material-ui/core";
 import Card from "@mui/material/Card";
-import {FilledInput, Input} from "@mui/material";
 
 
 const useStylePizzaItem = makeStyles(() => ({
 	pizzaItem: {
 		position: "relative",
 		display: "flex",
-		flex: "1 1 1",
-		left: "12rem",
+		flex: "1 1",
 		top: "7rem",
 		marginBottom: "6rem",
-		flexBasis: "33%",
+		flexBasis: "30%",
 	},
 }));
 
 const useStylesButtons = makeStyles(() => ({
 	buttonElements: {
+		position: "relative",
 		display: "flex",
-		position: "absolute",
-		top: "20rem",
-		left: "15rem",
+		top: "6rem",
+		right: "12rem",
 	},
 }));
 
 const useStyleText = makeStyles(() => ({
 	textElements: {
-		display: "flex",
+/*		position: "absolute",
+		flexWrap: "wrap",
 		flexDirection: "column",
-		justifyContent: "space-around",
+		bottom: "2rem",
+		right: "20px",*/
 	}
 }));
-
-
 
 
 const PizzaItem = (props) => {
@@ -59,22 +58,25 @@ const PizzaItem = (props) => {
 						image={props.img}
 						alt="margarita-pizza"
 						component="img"
-						height="350"
-						style={{width: "70%"}}
+						height="250"
+						style={{width: "50%"}}
 					/>
-					<CardContent className={textElements}>
-						<Typography gutterBottom variant="h5" component="div">
-							{props.title}
-						</Typography>
-						<Typography variant="body2" color="text.secondary" component={"div"}>
-							{props.ingredients}
-						</Typography>
-						<Typography style={{fontWeight: "bold", fontSize: "30px"}}>
-							kr. {props.price},-
-						</Typography>
-					</CardContent>
-						<CardActions className={buttonElements}>
-							<Button size={"large"} id={"add-to-card-button"} style={{
+					<div className={textElements}>
+						<CardContent>
+								<Typography gutterBottom variant="h4" component="div">
+									{props.title}
+								</Typography>
+								<Typography style={{fontSize: "17px"}} variant="body2" color="text.secondary" component={"div"}>
+									{props.ingredients}
+								</Typography>
+								<Typography style={{fontWeight: "bold", fontSize: "30px"}}>
+									kr. {props.price},-
+								</Typography>
+						</CardContent>
+					</div>
+					<div className={buttonElements}>
+						<CardActions>
+							<Button size={"medium"} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
@@ -85,15 +87,17 @@ const PizzaItem = (props) => {
 							<span style={{
 								backgroundColor: '#009688',
 								color: 'white',
-								width: "2rem",
+								width: "3rem",
 								display: "flex",
 								justifyContent: "center",
-								borderRadius: "10%"
+								borderRadius: "10%",
+								fontSize: "larger",
 							}}>{counter}</span>
 							<Button onClick={incrementCounter} size={"small"} style={{
 								backgroundColor: '#009688',
 								color: 'white'}}>+</Button>
 						</CardActions>
+					</div>
 				</Card>
 			</div>
 	);
