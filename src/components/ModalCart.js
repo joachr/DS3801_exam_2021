@@ -99,7 +99,7 @@ export default function BasicModal() {
 	};
 
   return (
-    <div>
+      <div className={pizzaItem}>
       <Button onClick={handleOpen}>Open modal</Button>
         <Modal
         open={open}
@@ -111,8 +111,6 @@ export default function BasicModal() {
           <ShoppingCartOutlinedIcon fontSize="large" style={{
             color: 'black'
           }}/>
-           
-    <div className={pizzaItem}>
 				<Card className={cardElement} sx={{ maxWidth: 580 }}>
 					<CardMedia
 						image={pizzaImage}
@@ -156,11 +154,10 @@ export default function BasicModal() {
 						</CardActions>
 					</div>
 				</Card>
-			</div>
-  <Divider variant="middle"></Divider>
+        <Divider variant="middle"></Divider>
         </Box>
       </Modal>
-    </div>
+			</div>
     /*<div>
       <Button onClick={handleOpen}>Open modal</Button>
         <Modal
