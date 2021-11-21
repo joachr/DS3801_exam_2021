@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import cokeBeverageImage from "../assets/images/beverages/coke.jpg";
-import burnBeverageImage from "../assets/images/beverages/burn.jpeg";
-import bonaquaBeverageImage from "../assets/images/beverages/bonaqua.jpeg";
-import drpepperBeverageImage from "../assets/images/beverages/drpepper.jpeg";
+import burnBeverageImage from "../assets/images/beverages/burn.png";
+import imsdalBeverageImage from "../assets/images/beverages/imsdal.png";
+import drpepperBeverageImage from "../assets/images/beverages/drpepper.jpg";
 import spriteBeverageImage from "../assets/images/beverages/sprite.jpg";
 import MenuItemPrint from "./MenuItemPrint.js";
 
@@ -19,13 +19,13 @@ const INITIAL_BEVERAGES = [
 		id: "b2",
 		title: "Burn",
 		image: burnBeverageImage,
-		ingredients: "0,25l",
+		ingredients: "0,5l",
 		price: "25",
 	},
 	{
 		id: "b3",
-		title: "Bon Aqua",
-		image: bonaquaBeverageImage,
+		title: "Imsdal",
+		image: imsdalBeverageImage,
 		ingredients: "0,5l",
 		price: "20",
 	},

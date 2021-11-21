@@ -7,7 +7,7 @@ const useStyleCardItem = makeStyles(() => ({
 	cardItem: {
 		position: "relative",
 		display: "flex",
-		flex: "1 1 auto",
+		flex: "1 1 30%",
 		top: "10rem",
 		marginBottom: "2rem",
 		boxSizing: "border-box",
@@ -76,10 +76,10 @@ const MenuItemCard = (props) => {
 
 	return (
 			<div className={cardItem}>
-				<Card className={cardElement} sx={{ maxWidth: 580 }}>
+				<Card className={cardElement} sx={{ minWidth: 568 }}>
 					<CardMedia
 						image={props.img}
-						alt="food dish"
+						alt="food item"
 						component="img"
 						height="250"
 						style={{width: "50%"}}

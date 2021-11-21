@@ -30,7 +30,7 @@ function App() {
       <PizzaStorage/>
       <SaladStorage/>
       <BeverageStorage/>
-      <Checkout />
+      {/*<Checkout />*/}
       <BasicModal/>
       <Footer />
       </ThemeProvider>
