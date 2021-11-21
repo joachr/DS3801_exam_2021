@@ -20,6 +20,7 @@ const Pizza = (props) => {
 		<div className={pizzaPrint}>
 				{props.items.map((pizza) => (
 					<PizzaItem
+						key={pizza.id}
 						title={pizza.title}
 						price={pizza.price}
 						ingredients={pizza.ingredients}

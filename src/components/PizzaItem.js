@@ -71,7 +71,7 @@ const PizzaItem = (props) => {
 	};
 
 	const testAddtoCardBtn = () => {
-	  console.log(props.id)
+	  console.log(props)
 	}
 
 	return (
