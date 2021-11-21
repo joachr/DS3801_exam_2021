@@ -2,6 +2,8 @@ import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
 import Checkout from './components/checkoutComponents/Checkout';
+import SideBar from './components/SideBar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import basilPizzaImage from './components/assets/images/basil.jpg'
@@ -13,6 +15,7 @@ import margaritaPizzaImage from './components/assets/images/margarita.jpeg'
 import Footer from './components/Footer';
 import BasicModal from './components/ModalCart';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -65,6 +68,7 @@ const INITIAL_PIZZAS = [
   },
 ];
 
+
 function App() {
   const [pizzas, setPizzas] = useState(INITIAL_PIZZAS);
 
@@ -72,13 +76,20 @@ function App() {
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
+
+<Router>
+  <SideBar />
+    <Switch>
+      <Route path='/' />
+    </Switch>
+</Router>
+
       <Pizza items={pizzas}/>
       <Checkout />
       <BasicModal/>
       <Footer />
       </ThemeProvider>
     </div>
-
   );
 }
 
