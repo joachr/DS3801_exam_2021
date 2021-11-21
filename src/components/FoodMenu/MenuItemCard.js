@@ -14,31 +14,32 @@ const useStyleCardItem = makeStyles(() => ({
 	},
 }));
 
-const useStylesButtons = makeStyles(() => ({
-	buttonElements: {
-		position: "relative",
-		top: "11rem",
-		right: "1rem",
-	},
-}));
-
 const useStyleText = makeStyles(() => ({
 	textElements: {
 		position: "absolute",
-		display: "flex",
 		textAlign: "right",
-		width: "55%",
-		height: "55%",
-		bottom: "8rem",
-		left: "16rem",
+		height: "50%",
+		width: "45%",
+		left: "50%",
 	}
+}));
+
+const useStylesButtons = makeStyles(() => ({
+	buttonElements: {
+		position: "absolute",
+		textAlign: "right",
+		height: "50%",
+		width: "50%",
+		top: "70%",
+		left: "45%",
+	},
 }));
 
 const useStylePrice = makeStyles(() => ({
 	priceElement: {
 		position: "absolute",
-		top: "-2rem",
-		left: "200px",
+		bottom: "9rem",
+		left: "70%",
 	}
 }));
 
@@ -48,6 +49,7 @@ const useStyleCard = makeStyles(() => ({
 		position: "relative",
 		padding: "1rem",
 		margin: "1rem",
+		width: "100%",
 	}
 }));
 
@@ -76,22 +78,26 @@ const MenuItemCard = (props) => {
 
 	return (
 			<div className={cardItem}>
-				<Card className={cardElement} sx={{ minWidth: 568 }}>
+				<Card className={cardElement} sx={{ minWidth: 420, maxWidth: 580 }}>
 					<CardMedia
 						image={props.img}
 						alt="food item"
 						component="img"
-						height="250"
-						style={{width: "50%"}}
+						height="255"
+						style={{maxWidth: "16rem", margin: "1rem"}}
 					/>
 					<div className={textElements}>
-						<CardContent style={{maxHeight: "300px"}}>
-								<Typography gutterBottom variant="h4" component="div">
+						<CardContent>
+							<div>
+								<Typography variant="h4" component="div">
 									{props.title}
 								</Typography>
-								<Typography style={{fontSize: "17px"}} variant="body2" color="text.secondary" component={"div"}>
+							</div>
+							<div>
+								<Typography>
 									{props.ingredients}
 								</Typography>
+							</div>
 						</CardContent>
 					</div>
 					<div className={buttonElements}>
@@ -110,11 +116,11 @@ const MenuItemCard = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button onClick={testAddtoCardBtn} size={"large"} id={"add-to-card-button"} style={{
+							<Button onClick={testAddtoCardBtn} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
-								width: "6rem",
+								width: "30%",
 							}}>Legg til</Button>
 						</CardActions>
 					</div>

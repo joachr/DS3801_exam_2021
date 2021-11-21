@@ -43,6 +43,13 @@ const INITIAL_SALADS = [
 		ingredients: "karamellisert kalkun, cherry tomat, salat mix, appelsinbiter, caesar-saus",
 		price: "149"
 	},
+	{
+		id: "s6",
+		title: "Kalkun salat",
+		image: turkeySaladImage,
+		ingredients: "karamellisert kalkun, cherry tomat, salat mix, appelsinbiter, caesar-saus",
+		price: "149"
+	},
 ];
 
 const SaladStorage = () => {

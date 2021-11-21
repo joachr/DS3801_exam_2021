@@ -43,6 +43,13 @@ const INITIAL_BEVERAGES = [
 		ingredients: "0,5l",
 		price: "25",
 	},
+	{
+		id: "b6",
+		title: "Dr. Pepper",
+		image: drpepperBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
 ];
 
 const BeverageStorage = () => {
