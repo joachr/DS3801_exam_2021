@@ -4,7 +4,7 @@ import React from 'react'
 function InputField({type, placeholder}) {
     return (
         <div style={{
-            width: '50%'
+            width: '45%'
         }}>
             <Input 
                 style={{
