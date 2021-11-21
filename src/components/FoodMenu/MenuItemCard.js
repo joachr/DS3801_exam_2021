@@ -3,8 +3,8 @@ import {Button, CardActions, CardContent, CardMedia, makeStyles, Typography} fro
 import Card from "@mui/material/Card";
 
 
-const useStylePizzaItem = makeStyles(() => ({
-	pizzaItem: {
+const useStyleCardItem = makeStyles(() => ({
+	cardItem: {
 		position: "relative",
 		display: "flex",
 		flex: "1 1 auto",
@@ -52,8 +52,8 @@ const useStyleCard = makeStyles(() => ({
 }));
 
 
-const PizzaItem = (props) => {
-	const { pizzaItem } = useStylePizzaItem();
+const MenuItemCard = (props) => {
+	const { cardItem } = useStyleCardItem();
 	const { buttonElements } = useStylesButtons();
 	const { textElements } = useStyleText();
 	const { priceElement } = useStylePrice();
@@ -75,11 +75,11 @@ const PizzaItem = (props) => {
 	}
 
 	return (
-			<div className={pizzaItem}>
+			<div className={cardItem}>
 				<Card className={cardElement} sx={{ maxWidth: 580 }}>
 					<CardMedia
 						image={props.img}
-						alt="margarita-pizza"
+						alt="food dish"
 						component="img"
 						height="250"
 						style={{width: "50%"}}
@@ -124,4 +124,4 @@ const PizzaItem = (props) => {
 }
 
 
-export default PizzaItem;
+export default MenuItemCard;

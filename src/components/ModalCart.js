@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import pizzaImage from '../components/assets/images/cadonation.jpg'
+import pizzaImage from './assets/images/pizzas/cadonation.jpg'
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
 import { CardContent, Divider } from '@material-ui/core';
 
