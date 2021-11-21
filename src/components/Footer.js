@@ -11,14 +11,14 @@ function Footer() {
                     height: '8rem'}}>
                     <Box style={{
                         height: '100%',
-                        width: '25%',
+                        width: '20rem',
                         backgroundColor: '#009688',
                     }}>
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            margin: '1rem'
+                            marginTop: '1rem'
                         }}>
                             <ul style={{
                                 listStyle: 'none',
