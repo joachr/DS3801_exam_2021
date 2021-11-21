@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import '../components/assets/css/fonts.css'
 import {Button, CardActions, CardContent, CardMedia, makeStyles, Typography} from "@material-ui/core";
 import Card from "@mui/material/Card";
 
@@ -12,10 +11,6 @@ const useStylePizzaItem = makeStyles(() => ({
 		top: "10rem",
 		marginBottom: "2rem",
 		boxSizing: "border-box",
-/*		"&:hover": {
-			transition: "transform .1s ease",
-			transform: "scale(1.01)",
-		}*/
 	},
 }));
 
@@ -75,6 +70,10 @@ const PizzaItem = (props) => {
 		}
 	};
 
+	const testAddtoCardBtn = () => {
+	  console.log(props.id)
+	}
+
 	return (
 			<div className={pizzaItem}>
 				<Card className={cardElement} sx={{ maxWidth: 580 }}>
@@ -111,7 +110,7 @@ const PizzaItem = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button size={"large"} id={"add-to-card-button"} style={{
+							<Button onClick={testAddtoCardBtn} size={"large"} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',

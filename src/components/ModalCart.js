@@ -44,7 +44,7 @@ export default function BasicModal() {
           }}/>
            
           <div>
-            <img style={{ width: "200px"}} src={pizzaImage} />
+            <img style={{ width: "200px"}} src={pizzaImage}  alt={"image of pizza"}/>
               <div style={{position: 'absolute', left: '235px', top:'75px'}} >
                 <CardContent style={{maxHeight: "300px"}}>
                   <Typography gutterBottom  variant="h4" id="modal-modal-description">
@@ -84,8 +84,8 @@ export default function BasicModal() {
 
             <Button endIcon={<ArrowUpward style= {{ font: '30px Arial', marginRight: '15px'}}/>}  size={"Large"} style={{
                 borderRadius: '9px',
-                position: 'absolute', 
-                left: '595px', 
+                position: 'absolute',
+                left: '595px',
                 top:'288px',
 								backgroundColor: '#009688',
 								color: 'white',
@@ -95,8 +95,8 @@ export default function BasicModal() {
             
             <Button endIcon={<ArrowDownward style= {{ font: '30px Arial', marginRight: '15px'}}/>}  size={"Large"} style={{
                 borderRadius: '9px',
-                position: 'absolute', 
-                left: '595px', 
+                position: 'absolute',
+                left: '595px',
                 top:'335px',
 								backgroundColor: '#009688',
 								color: 'white',

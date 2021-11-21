@@ -23,7 +23,8 @@ const Pizza = (props) => {
 						title={pizza.title}
 						price={pizza.price}
 						ingredients={pizza.ingredients}
-						img={pizza.image}/>
+						img={pizza.image}
+						id={pizza.id}/>
 				))}
 		</div>
 	)
