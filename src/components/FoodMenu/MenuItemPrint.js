@@ -2,7 +2,6 @@ import MenuItemCard from "./MenuItemCard.js";
 import {makeStyles} from "@material-ui/styles";
 
 
-
 const useStyles = makeStyles(() => ({
 	menuPrint: {
 		position: "relative",
@@ -19,16 +18,15 @@ const MenuItemPrint = (props) => {
 
 	return (
 		<div className={menuPrint}>
-				{props.items.map((item) => (
-					<MenuItemCard
-						title={item.title}
-						price={item.price}
-						ingredients={item.ingredients}
-						img={item.image}
-						id={item.id}
-						item={item}
-						key={item.id}/>
-				))}
+			{props.items.map((item) => (
+				<MenuItemCard title={item.title}
+				              price={item.price}
+				              ingredients={item.ingredients}
+				              img={item.image}
+				              id={item.id}
+				              item={item}
+				              key={item.id}/>
+			))}
 		</div>
 	)
 }
