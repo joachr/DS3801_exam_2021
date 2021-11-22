@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {makeStyles} from '@material-ui/styles';
-import {Button, CardActions, CardContent, CardMedia, Typography} from "@material-ui/core";
+import {Button, CardActions, CardContent, CardMedia, Grid, Typography} from "@material-ui/core";
 import Card from "@mui/material/Card";
 import {useCart} from "react-use-cart";
 
@@ -11,6 +11,7 @@ const useStyleCardItem = makeStyles(() => ({
 		display: "flex",
 		flex: "1 1 30%",
 		marginBottom: "2rem",
+		marginLeft: '160px'
 	},
 }));
 
