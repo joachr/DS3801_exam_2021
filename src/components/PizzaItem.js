@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {Button, CardActions, CardContent, CardMedia, makeStyles, Typography} from "@material-ui/core";
+import {Button, CardActions, CardContent, CardMedia, Typography} from "@material-ui/core";
 import Card from "@mui/material/Card";
-
+import {makeStyles} from "@material-ui/styles";
 
 const useStylePizzaItem = makeStyles(() => ({
 	pizzaItem: {

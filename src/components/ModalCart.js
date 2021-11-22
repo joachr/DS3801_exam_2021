@@ -6,7 +6,8 @@ import Modal from '@mui/material/Modal';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import pizzaImage from '../components/assets/images/cadonation.jpg'
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
-import { Card, CardActions, CardContent, makeStyles, CardMedia, Divider } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardMedia, Divider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 
 
 const style = {

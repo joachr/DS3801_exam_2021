@@ -1,8 +1,8 @@
 import { Link } from '@material-ui/core'
 import React, {useState} from 'react';
 import * as FaIcons from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import {SidebarData} from './SideBarData';
+{/*import { Link } from 'react-router-dom';*/}
 
 function SideBar() {
     const [sidebar, setSidebar] = useState(false)
@@ -18,10 +18,10 @@ function SideBar() {
             {SidebarData.map((item, index) => {
                 return(
                     <li key={index} className={item.cName}>
-                    <Link to={item.path}>
+                    {/*<Link to={item.path}>
                     {item.icon}
                     <span>{item.title}</span>
-                    </Link>
+                </Link>*/}
                     </li>
                     
                 )

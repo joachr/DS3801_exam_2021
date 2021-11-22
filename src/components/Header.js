@@ -1,5 +1,5 @@
 import { AppBar, Badge, Fab, Toolbar } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
+import {makeStyles} from "@material-ui/styles";
 import HeaderButton from "./HeaderButton";
 import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
 import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded';
@@ -16,7 +16,8 @@ const useStyles = makeStyles(() => ({
     return <Toolbar style={{
       position: 'relative',
       alignItems: 'right',
-      justifyContent: 'right'
+      justifyContent: 'right',
+      backgroundColor: '#FFD148'
     }}>
         <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord"></HeaderButton>
         <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>

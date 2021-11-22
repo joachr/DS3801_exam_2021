@@ -2,6 +2,7 @@ import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
 import Checkout from './components/checkoutComponents/Checkout';
+import ReserveTable from './components/ReserveTable';
 import SideBar from './components/SideBar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useState} from "react";
@@ -15,6 +16,9 @@ import margaritaPizzaImage from './components/assets/images/margarita.jpeg'
 import Footer from './components/Footer';
 import BasicModal from './components/ModalCart';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import DateAdapter from '@material-ui/lab/AdapterDateFns';
+import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
+
 
 
 const font = "'Zen Maru Gothic', sans-serif";
@@ -79,23 +83,24 @@ function App() {
   const [pizzas, setPizzas] = useState(INITIAL_PIZZAS);
 
   return (
+    <LocalizationProvider dateAdapter={DateAdapter}>
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
-
-<Router>
+      <ReserveTable />
+{/*<Router>
   <SideBar />
     <Switch>
       <Route path='/' />
     </Switch>
-</Router>
+</Router>*/}
 
       <Pizza items={pizzas}/>
       <Checkout />
       <BasicModal/>
       <Footer />
       </ThemeProvider>
-    </div>
+    </div></LocalizationProvider>
   );
 }
 
