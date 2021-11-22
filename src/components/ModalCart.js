@@ -32,7 +32,7 @@ function ModalCart({open, onClose}) {
 
     return (
         <div>
-            <Modal
+            <Modal style={{overflow: "scroll"}}
                 open={open}
                 onClose={onClose}
                 aria-labelledby="modal-modal-title"
