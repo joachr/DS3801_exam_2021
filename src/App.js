@@ -1,16 +1,16 @@
+import React from 'react';
 import './App.css';
 import './components/assets/css/fonts.css'
-import Header from './components/Header.js';
-import ReserveTable from './components/ReserveTable';
-/*import Checkout from './components/checkoutComponents/Checkout';
-import Footer from './components/Footer';
+import Header from './components/HeaderAndFooter/Header.js';
+import ReserveTable from './components/Reservation/ReserveTable';
+/*import Checkout from './components/Checkout/Checkout';
+import Footer from './components/HeaderAndFooter/Footer';
 import BasicModal from './components/ModalCart';*/
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
 import ModalCart from "./components/ModalCart.js";
-import { CartProvider } from "react-use-cart";
 /*import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
@@ -29,17 +29,22 @@ const theme = createTheme({
 
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
+    const [openCart, setOpenCart] = React.useState(false);
+    const handleOpenCart = () => setOpenCart(true);
+    const handleCloseCart = () => setOpenCart(false);
+    
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
-        <CartProvider>
-          <Header />
-          <ReserveTable />
-          <PizzaStorage/>
-          <SaladStorage/>
-          <BeverageStorage/>
-        </CartProvider>
+      <Header func1={ handleOpen } func2={ handleOpenCart }/>
+      <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
+      <PizzaStorage/>
+      <SaladStorage/>
+      <BeverageStorage/>
         {/*<Checkout />
 
 
@@ -53,7 +58,8 @@ function App() {
       <Checkout />
       <ModalCart/>
       <Footer />*/}
-        <ModalCart />
+        <ModalCart open={openCart}
+                onClose={handleCloseCart} />
       </ThemeProvider>
     </div>
   );

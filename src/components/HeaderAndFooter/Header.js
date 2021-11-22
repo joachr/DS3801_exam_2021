@@ -5,8 +5,8 @@ import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
 import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from "react";
-import ModalCart from "./ModalCart.js";
-import Cart from "./Cart/Cart.js";
+import ModalCart from "../ModalCart.js";
+import Cart from "../Cart/Cart.js";
 
 const useStyles = makeStyles(() => ({
     header: {
@@ -44,11 +44,34 @@ const useStyles = makeStyles(() => ({
     </Toolbar>;
   };
 
-function Header() {
+function Header({ func1, func2 }) {
     const { header } = useStyles();
   return (
     <div>
-      <AppBar className={header}>{displayDesktop()}</AppBar>
+      <AppBar className={header}><Toolbar style={{
+      position: 'relative',
+      alignItems: 'right',
+      justifyContent: 'right',
+      backgroundColor: '#FFD148'
+    }}>
+        <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord" click={ func1 }></HeaderButton>
+        <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
+       
+        <Badge  
+        anchorOrigin={{vertical: 'bottom', horizontal: 'left',}}
+        color="secondary" 
+        overlap="circular" 
+        badgeContent="5">
+
+          <Fab style={{ backgroundColor: '#009688' }} onClick={ func2 }>
+            <ShoppingCartOutlinedIcon fontSize="large" style={{
+              color: 'black',
+              marginLeft: '0.5em',
+              marginRight: '0.5em'
+            }}/>
+          </Fab>
+        </Badge>
+    </Toolbar></AppBar>
     </div>
   );
 }
