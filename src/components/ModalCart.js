@@ -7,9 +7,11 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import pizzaImage from './assets/images/pizzas/cadonation.jpg'
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
 import { CardContent, Divider } from '@material-ui/core';
-import {CardActions, makeStyles, CardMedia,} from '@material-ui/core';
+import {CardActions, CardMedia,} from '@material-ui/core';
 import ShopIcon from '@mui/icons-material/Shop';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import {makeStyles} from "@material-ui/styles";
+
 
 const style = {
     position: 'relative',

@@ -1,6 +1,7 @@
 import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
+import ReserveTable from './components/ReserveTable';
 /*import Checkout from './components/checkoutComponents/Checkout';
 import Footer from './components/Footer';
 import BasicModal from './components/ModalCart';*/
@@ -31,6 +32,7 @@ function App() {
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
+      <ReserveTable />
       <PizzaStorage/>
       <SaladStorage/>
       <BeverageStorage/>
