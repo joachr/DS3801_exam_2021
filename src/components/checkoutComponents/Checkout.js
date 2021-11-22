@@ -34,6 +34,8 @@ function Checkout() {
                 alignItems: 'center',
                 maxWidth: 'md',
                 height: '80rem',
+                //FIXME kun lagt på border for å se hvor stor den egentlig er, hilsen rune
+                border: "12px solid #000",
         }}>
             <Card style={{
                 position: 'inherit',

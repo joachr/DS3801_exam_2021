@@ -3,42 +3,41 @@ import {Button, CardActions, CardContent, CardMedia, makeStyles, Typography} fro
 import Card from "@mui/material/Card";
 
 
-const useStylePizzaItem = makeStyles(() => ({
-	pizzaItem: {
+const useStyleCardItem = makeStyles(() => ({
+	cardItem: {
 		position: "relative",
 		display: "flex",
-		flex: "1 1 auto",
-		top: "10rem",
+		flex: "1 1 30%",
 		marginBottom: "2rem",
-		boxSizing: "border-box",
-	},
-}));
-
-const useStylesButtons = makeStyles(() => ({
-	buttonElements: {
-		position: "relative",
-		top: "11rem",
-		right: "1rem",
 	},
 }));
 
 const useStyleText = makeStyles(() => ({
 	textElements: {
 		position: "absolute",
-		display: "flex",
 		textAlign: "right",
-		width: "55%",
-		height: "55%",
-		bottom: "8rem",
-		left: "16rem",
+		height: "50%",
+		width: "45%",
+		left: "50%",
 	}
+}));
+
+const useStylesButtons = makeStyles(() => ({
+	buttonElements: {
+		position: "absolute",
+		textAlign: "right",
+		height: "50%",
+		width: "50%",
+		top: "70%",
+		left: "45%",
+	},
 }));
 
 const useStylePrice = makeStyles(() => ({
 	priceElement: {
 		position: "absolute",
-		top: "-2rem",
-		left: "200px",
+		bottom: "9rem",
+		left: "70%",
 	}
 }));
 
@@ -48,12 +47,13 @@ const useStyleCard = makeStyles(() => ({
 		position: "relative",
 		padding: "1rem",
 		margin: "1rem",
+		width: "100%",
 	}
 }));
 
 
-const PizzaItem = (props) => {
-	const { pizzaItem } = useStylePizzaItem();
+const MenuItemCard = (props) => {
+	const { cardItem } = useStyleCardItem();
 	const { buttonElements } = useStylesButtons();
 	const { textElements } = useStyleText();
 	const { priceElement } = useStylePrice();
@@ -71,27 +71,31 @@ const PizzaItem = (props) => {
 	};
 
 	const testAddtoCardBtn = () => {
-	  console.log(props.id)
+	  console.log(props)
 	}
 
 	return (
-			<div className={pizzaItem}>
-				<Card className={cardElement} sx={{ maxWidth: 580 }}>
+			<div className={cardItem}>
+				<Card className={cardElement} sx={{ minWidth: 420, maxWidth: 580 }}>
 					<CardMedia
 						image={props.img}
-						alt="margarita-pizza"
+						alt="food item"
 						component="img"
-						height="250"
-						style={{width: "50%"}}
+						height="255"
+						style={{maxWidth: "16rem", margin: "1rem"}}
 					/>
 					<div className={textElements}>
-						<CardContent style={{maxHeight: "300px"}}>
-								<Typography gutterBottom variant="h4" component="div">
+						<CardContent>
+							<div>
+								<Typography variant="h4" component="div">
 									{props.title}
 								</Typography>
-								<Typography style={{fontSize: "17px"}} variant="body2" color="text.secondary" component={"div"}>
+							</div>
+							<div>
+								<Typography>
 									{props.ingredients}
 								</Typography>
+							</div>
 						</CardContent>
 					</div>
 					<div className={buttonElements}>
@@ -110,11 +114,11 @@ const PizzaItem = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button onClick={testAddtoCardBtn} size={"large"} id={"add-to-card-button"} style={{
+							<Button onClick={testAddtoCardBtn} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
-								width: "6rem",
+								width: "30%",
 							}}>Legg til</Button>
 						</CardActions>
 					</div>
@@ -124,4 +128,4 @@ const PizzaItem = (props) => {
 }
 
 
-export default PizzaItem;
+export default MenuItemCard;

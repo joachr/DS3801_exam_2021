@@ -2,6 +2,12 @@ import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
 import Checkout from './components/checkoutComponents/Checkout';
+import Footer from './components/Footer';
+import BasicModal from './components/ModalCart';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
+import SaladStorage from "./components/FoodMenu/SaladStorage.js";
+import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
 import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
@@ -16,7 +22,6 @@ import Footer from './components/Footer';
 import BasicModal from './components/ModalCart';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { paths } from './components/SideBarData';
-
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -75,14 +80,17 @@ const INITIAL_PIZZAS = [
   },
 ];
 
-
 function App() {
-  const [pizzas, setPizzas] = useState(INITIAL_PIZZAS);
 
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
+      <PizzaStorage/>
+      <SaladStorage/>
+      <BeverageStorage/>
+      {/*<Checkout />
+
 
       <SideBar />
       <Routes>
@@ -93,7 +101,7 @@ function App() {
 
       <Checkout />
       <BasicModal/>
-      <Footer />
+      <Footer />*/}
       </ThemeProvider>
     </div>
   );
