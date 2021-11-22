@@ -11,10 +11,10 @@ import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
 import ModalCart from "./components/ModalCart.js";
-/*import SideBar from './components/SideBar';
+import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
-import { paths } from './components/SideBarData';*/
+import { paths } from './components/SideBarData';
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -42,19 +42,18 @@ function App() {
       <ThemeProvider theme={theme}>
       <Header func1={ handleOpen } func2={ handleOpenCart }/>
       <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
-      <PizzaStorage/>
-      <SaladStorage/>
-      <BeverageStorage/>
-        {/*<Checkout />
+      
+        {/*<Checkout />*/}
 
 
       <SideBar />
       <Routes>
-        <Route path='/' />
-        <Route path={paths.PIZZA} element={<Pizza items={pizzas} />} />
+        
+        <Route path={paths.PIZZA} element={<PizzaStorage />} />
+        <Route path={paths.SALAD} element={<SaladStorage />} />
 
       </Routes>
-
+      {    /*
       <Checkout />
       <ModalCart/>
       <Footer />*/}
