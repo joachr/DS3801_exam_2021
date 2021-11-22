@@ -9,10 +9,11 @@ import Card from '@material-ui/core/Card';
 import { CardContent, Container } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import HowManyPeople from './HowManyPeople';
+import HeaderButton from './HeaderButton';
+import { Modal } from '@material-ui/core';
+import InputField from './checkoutComponents/InputField.js'
 
-
-
-function ReserveTable() {
+function ReserveTable({open, onClose, onBackdropClick}) {
     const [value, setValue] = React.useState(new Date('2021-11-22T12:55:54'));
 
   const handleChange = (newValue) => {
@@ -20,17 +21,14 @@ function ReserveTable() {
   };
     return (
         <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <Container style={{
-                position: 'relative',
+        
+            <Modal open={open} onClose={onClose} onBackdropClick={onClose} style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                maxWidth: 'md',
-                height: '30rem',
-        }}>
+            }}>
             <Card style={{
                 position: 'inherit',
-                width: '20rem',
             }} 
             open="true">
                 <CardContent>
@@ -52,10 +50,23 @@ function ReserveTable() {
                     />
                     <Divider variant="middle"></Divider>
                     <HowManyPeople></HowManyPeople>
+                    <Divider variant="middle"></Divider>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                    }}>
+                        <InputField type='string' placeholder='Fullt navn'></InputField>
+                        <InputField type='string' placeholder='E-post'></InputField>
+                        <InputField type='number' placeholder='Tlf'></InputField>
+                    </div>
+                    <Divider variant="middle"></Divider>
+                    <HeaderButton text='Fullfør reservasjon' click={onClose}></HeaderButton>
                     </Stack>
                 </CardContent>
             </Card>
-        </Container>
+        </Modal>
         </LocalizationProvider>
     )
 }

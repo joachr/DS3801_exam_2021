@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
@@ -27,12 +28,15 @@ const theme = createTheme({
 
 
 function App() {
-
+  const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
-      <Header />
-      <ReserveTable />
+      <Header func={ handleOpen }/>
+      <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
       <PizzaStorage/>
       <SaladStorage/>
       <BeverageStorage/>
