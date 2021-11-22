@@ -83,7 +83,7 @@ function App() {
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
-      
+
       <SideBar />
       <Routes>
         <Route path='/' />
@@ -91,7 +91,6 @@ function App() {
        
       </Routes>
 
-      <Pizza items={pizzas}/>
       <Checkout />
       <BasicModal/>
       <Footer />
