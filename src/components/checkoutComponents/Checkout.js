@@ -10,20 +10,22 @@ function Checkout() {
     const makeVisible = () => setVisible(true);
     const makeNotVisible = () => setVisible(false);
 
-    const [tip, setTip] = React.useState('0kr');
-    const addTen = () => setTip('10kr');
-    const addTwenty = () => setTip('20kr');
-    const addThirty = () => setTip('30kr');
-    const addForty = () => setTip('40kr');
-    const setToZero = () => setTip('0kr');
+    const [tip, setTip] = React.useState(0);
+    const addTen = () => setTip(10);
+    const addTwenty = () => setTip(20);
+    const addThirty = () => setTip(30);
+    const addForty = () => setTip(40);
+    const setToZero = () => setTip(0);
 
-    const [frakt, setFrakt] = React.useState('0kr');
-    const medFrakt = () => setFrakt('49kr');
-    const utenFrakt = () => setFrakt('0kr')
+    const [frakt, setFrakt] = React.useState(0);
+    const medFrakt = () => setFrakt(49);
+    const utenFrakt = () => setFrakt(0)
+
+    const [subTotal, setSubTotal] = React.useState(0);
+
+    const [total, setTotal] = React.useState(0);
 
 
-
-    
     return (
         <Container style={{
                 position: 'relative',
@@ -115,7 +117,7 @@ function Checkout() {
                     </Dialog>
 
                     <Divider variant="middle"></Divider>
-                    <Payment tipss={ tip } fraktt={ frakt }></Payment>
+                    <Payment tipss={ tip } fraktt={ frakt } subTotall={ subTotal } totall={ tip + frakt + subTotal }></Payment>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',

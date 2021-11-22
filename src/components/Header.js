@@ -8,7 +8,7 @@ import React from "react";
 
 const useStyles = makeStyles(() => ({
     header: {
-       backgroundColor: "#FFD148",
+      backgroundColor: "#FFD148",
     },
  }));
 
@@ -27,16 +27,14 @@ const useStyles = makeStyles(() => ({
         overlap="circular" 
         badgeContent="5">
 
-        <Fab style={{ backgroundColor: '#009688' }}>
-          <ShoppingCartOutlinedIcon fontSize="large" style={{
-            color: 'black',
-            marginLeft: '0.5em',
-            marginRight: '0.5em'
-          }}/>
-        </Fab>
-
+          <Fab style={{ backgroundColor: '#009688' }}>
+            <ShoppingCartOutlinedIcon fontSize="large" style={{
+              color: 'black',
+              marginLeft: '0.5em',
+              marginRight: '0.5em'
+            }}/>
+          </Fab>
         </Badge>
-   
     </Toolbar>;
   };
 
