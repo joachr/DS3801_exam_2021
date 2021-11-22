@@ -28,7 +28,6 @@ function App() {
       <ThemeProvider theme={theme}>
       <Header />
       <PizzaStorage/>
-        //FIXME til rune: add 1 stk salat og 1 stk drikke til så det blir partall som på pizzaene
       <SaladStorage/>
       <BeverageStorage/>
       {/*<Checkout />

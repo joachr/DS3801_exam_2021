@@ -9,6 +9,7 @@ const useStyles = makeStyles(() => ({
 		display: "flex",
 		flexWrap: "wrap",
 		width: "100%",
+		top: "10rem",
 	},
 }));
 

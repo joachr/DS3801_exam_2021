@@ -8,7 +8,6 @@ const useStyleCardItem = makeStyles(() => ({
 		position: "relative",
 		display: "flex",
 		flex: "1 1 30%",
-		top: "10rem",
 		marginBottom: "2rem",
 	},
 }));
