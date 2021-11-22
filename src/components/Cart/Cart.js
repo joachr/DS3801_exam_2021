@@ -1,50 +1,79 @@
 import React from 'react';
-import {useCart} from "react-use-cart";
-
+import { useCart } from "react-use-cart";
+import {Typography} from "@material-ui/core";
+import ModalCart from "../ModalCart.js";
 import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
+
 
 const Cart = () => {
-
 	const {
 		isEmpty,
 		totalUniqueItems,
+		items,
 		totalItems,
 		cartTotal,
 		updateItemQuantity,
 		removeItem,
 		emptyCart,
-		items
 	} = useCart();
 
-	/*if (isEmpty) return <h1>Your cart is empty</h1>*/
-
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+	if (isEmpty) return <Typography variant={"h5"}>Handlekurven er tom</Typography>
 
 	return (
-		<>
-{/*		<Button onClick={handleOpen}>Open modal</Button>
-			<Modal
-				open={open}
-				onClose={handleClose}
-				aria-labelledby="modal-modal-title"
-				aria-describedby="modal-modal-description"
-			>
-				<Box>
-					<Typography id="modal-modal-title" variant="h6" component="h2">
-						Text in a modal
-					</Typography>
-					<Typography id="modal-modal-description" sx={{ mt: 2 }}>
-						Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-					</Typography>
-				</Box>
-			</Modal>*/}
-		</>
+
+		<section>
+			<div>
+				<div>
+					<Typography variant={"h5"}>Handlekurv ({totalUniqueItems}) Totalt produkter ({totalItems})</Typography>
+					<table>
+						<tbody>
+							{items.map((item, index) => {
+								return(
+									<tr key={index}>
+										<td>
+											<img src={item.img} style={{height: "6rem"}}/>
+										</td>
+										<td>{item.title}</td>
+										<td>{item.price}</td>
+										<td>Antall: ({item.quantity})</td>
+										<td>
+											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
+												color: 'white',
+												borderColor: "white",
+												padding: "2px",
+												margin: "3px",
+											}}>-</Button>
+											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity +1)} style={{
+												color: 'white',
+												borderColor: "white",
+												padding: "2px",
+												margin: "3px",
+											}}>+</Button>
+											<Button onClick={() => removeItem(item.id)} style={{
+												color: 'black',
+												backgroundColor: '#fff',
+											}}>Fjern vare</Button>
+										</td>
+									</tr>
+								)
+							})}
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<Typography>Total pris: kr.{cartTotal},-</Typography>
+				</div>
+				<div>
+					<Button onClick={() => emptyCart()} style={{
+						color: 'black',
+						backgroundColor: '#fff',
+					}}>Tøm handlevognen</Button>
+				</div>
+			</div>
+		</section>
+
+			/*<ModalCart/>*/
 	);
 };
 
 export default Cart;
-

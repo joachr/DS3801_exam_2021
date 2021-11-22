@@ -56,14 +56,6 @@ const useStyleText = makeStyles(() => ({
     }
 }));
 
-const useStylePrice = makeStyles(() => ({
-    priceElement: {
-        position: "absolute",
-        top: "-2rem",
-        left: "200px",
-    }
-}));
-
 const useStyleCard = makeStyles(() => ({
     cardElement: {
         display: "flex",
@@ -81,7 +73,6 @@ export default function ModalCart({open, onClose}) {
     const {pizzaItem} = useStylePizzaItem();
     const {buttonElements} = useStylesButtons();
     const {textElements} = useStyleText();
-    const {priceElement} = useStylePrice();
     const {cardElement} = useStyleCard();
 
     const [counter, setCounter] = useState(1);
