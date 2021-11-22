@@ -4,6 +4,9 @@ import InputField from "./InputField";
 import HeaderButton from "../HeaderAndFooter/HeaderButton";
 import Payment from './Payment';
 import { Box } from '@mui/system';
+import CartForCheckout from './CartForCheckout';
+import { useCart } from "react-use-cart";
+
 
 function Checkout() {
     const [visible, setVisible] = React.useState(false);
@@ -34,7 +37,6 @@ function Checkout() {
                 alignItems: 'center',
                 maxWidth: 'md',
                 height: '80rem',
-                //FIXME kun lagt på border for å se hvor stor den egentlig er, hilsen rune
         }}>
             <Card style={{
                 position: 'inherit',
@@ -47,11 +49,9 @@ function Checkout() {
                         margin: '1rem'
                     }}
                     variant='elevation'>
-                        <CardHeader title="Handlekurv">
-                            <CardMedia>
-                            
-                            </CardMedia>
-                        </CardHeader>
+                            <CardContent>
+                            <CartForCheckout />
+                            </CardContent>
                     </Card>
                     <Divider variant="middle"></Divider>
                     <FormControl style={{
@@ -116,7 +116,7 @@ function Checkout() {
                     </Dialog>
 
                     <Divider variant="middle"></Divider>
-                    <Payment tipss={ tip } fraktt={ frakt } subTotall={ subTotal } totall={ tip + frakt + subTotal }></Payment>
+                    <Payment tipss={ tip } fraktt={ frakt } subTotall={ useCart().cartTotal } totall={ tip + frakt + useCart().cartTotal }></Payment>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
