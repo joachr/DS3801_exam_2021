@@ -4,14 +4,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import pizzaImage from './assets/images/pizzas/cadonation.jpg'
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
-import { CardContent, Divider } from '@material-ui/core';
-import {CardActions, CardMedia,} from '@material-ui/core';
+import pizzaImage from '../components/assets/images/pizzas/cadonation.jpg'
+import {makeStyles} from '@material-ui/styles';
+import {CardActions, CardContent, CardMedia, Divider} from '@material-ui/core';
 import ShopIcon from '@mui/icons-material/Shop';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import {makeStyles} from "@material-ui/styles";
-
 
 const style = {
     position: 'relative',
@@ -77,7 +75,7 @@ const useStyleCard = makeStyles(() => ({
 //const PizzaItem = (props) => {
 
 
-export default function BasicModal() {
+export default function ModalCart() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -175,3 +173,5 @@ export default function BasicModal() {
         </div>
     );
 }
+
+

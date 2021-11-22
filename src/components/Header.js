@@ -5,6 +5,8 @@ import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
 import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from "react";
+import ModalCart from "./ModalCart.js";
+import Cart from "./Cart/Cart.js";
 
 const useStyles = makeStyles(() => ({
     header: {
@@ -29,6 +31,9 @@ const useStyles = makeStyles(() => ({
         badgeContent="5">
 
           <Fab style={{ backgroundColor: '#009688' }}>
+
+            <Cart />
+
             <ShoppingCartOutlinedIcon fontSize="large" style={{
               color: 'black',
               marginLeft: '0.5em',

@@ -1,7 +1,9 @@
 import React, {useState} from "react";
+import {makeStyles} from '@material-ui/styles';
 import {Button, CardActions, CardContent, CardMedia, Typography} from "@material-ui/core";
 import Card from "@mui/material/Card";
-import {makeStyles} from "@material-ui/styles";
+import { useCart } from "react-use-cart";
+
 
 const useStyleCardItem = makeStyles(() => ({
 	cardItem: {
@@ -53,6 +55,9 @@ const useStyleCard = makeStyles(() => ({
 
 
 const MenuItemCard = (props) => {
+	const { addItem } = useCart();
+
+
 	const { cardItem } = useStyleCardItem();
 	const { buttonElements } = useStylesButtons();
 	const { textElements } = useStyleText();
@@ -70,9 +75,9 @@ const MenuItemCard = (props) => {
 		}
 	};
 
-	const testAddtoCardBtn = () => {
+/*	const testAddtoCardBtn = () => {
 	  console.log(props)
-	}
+	}*/
 
 	return (
 			<div className={cardItem}>
@@ -114,7 +119,7 @@ const MenuItemCard = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button onClick={testAddtoCardBtn} id={"add-to-card-button"} style={{
+							<Button onClick={() => addItem(props.item)} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',

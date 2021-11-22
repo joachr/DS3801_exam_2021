@@ -9,6 +9,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
+import ModalCart from "./components/ModalCart.js";
 /*import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
@@ -36,19 +37,20 @@ function App() {
       <PizzaStorage/>
       <SaladStorage/>
       <BeverageStorage/>
-      {/*<Checkout />
+        {/*<Checkout />
 
 
       <SideBar />
       <Routes>
         <Route path='/' />
         <Route path={paths.PIZZA} element={<Pizza items={pizzas} />} />
-       
+
       </Routes>
 
       <Checkout />
-      <BasicModal/>
+      <ModalCart/>
       <Footer />*/}
+        <ModalCart />
       </ThemeProvider>
     </div>
   );

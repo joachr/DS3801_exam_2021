@@ -1,14 +1,12 @@
 import React from 'react';
 
-
-
-
 const Cart = () => {
 	return (
-		<div>
-
-		</div>
+		<>
+			Cart test
+		</>
 	);
 };
 
 export default Cart;
+
