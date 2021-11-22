@@ -4,6 +4,7 @@ import burnBeverageImage from "../assets/images/beverages/burn.png";
 import imsdalBeverageImage from "../assets/images/beverages/imsdal.png";
 import drpepperBeverageImage from "../assets/images/beverages/drpepper.jpg";
 import spriteBeverageImage from "../assets/images/beverages/sprite.jpg";
+import drpepperlightBeverageImage from "../assets/images/beverages/drpepperlight.jpg";
 import MenuItemPrint from "./MenuItemPrint.js";
 
 
@@ -45,8 +46,8 @@ const INITIAL_BEVERAGES = [
 	},
 	{
 		id: "b6",
-		title: "Dr. Pepper",
-		image: drpepperBeverageImage,
+		title: "Dr. Pepper light",
+		image: drpepperlightBeverageImage,
 		ingredients: "0,5l",
 		price: "25",
 	},

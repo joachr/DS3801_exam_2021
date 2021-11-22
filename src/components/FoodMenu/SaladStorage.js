@@ -45,10 +45,10 @@ const INITIAL_SALADS = [
 	},
 	{
 		id: "s6",
-		title: "Kalkun salat",
+		title: "Kylling salat",
 		image: turkeySaladImage,
-		ingredients: "karamellisert kalkun, cherry tomat, salat mix, appelsinbiter, caesar-saus",
-		price: "149"
+		ingredients: "karamellisert kylling, cherry tomat, salat mix, appelsinbiter, caesar-saus",
+		price: "139"
 	},
 ];
 

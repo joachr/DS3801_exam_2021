@@ -10,7 +10,6 @@ const useStyleCardItem = makeStyles(() => ({
 		flex: "1 1 30%",
 		top: "10rem",
 		marginBottom: "2rem",
-		boxSizing: "border-box",
 	},
 }));
 
