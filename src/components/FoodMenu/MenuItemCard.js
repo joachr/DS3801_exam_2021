@@ -119,7 +119,7 @@ const MenuItemCard = (props) => {
 								fontSize: "20px",
 							}}>{counter}</span>
 							<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-							<Button onClick={() => addItem(props)} id={"add-to-card-button"} style={{
+							<Button onClick={() => addItem(props, counter)} id={"add-to-card-button"} style={{
 								backgroundColor: '#009688',
 								color: 'white',
 								margin: '1em',
