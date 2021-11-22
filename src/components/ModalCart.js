@@ -47,7 +47,7 @@ function ModalCart({open, onClose}) {
                         Checkout
                     </Button>
 
-                    <Button style={{
+                    <Button component={Link} to="/pizza" style={{
                         color: 'white',
                         backgroundColor: '#009688',
                         position: 'relative', top: '20px', left: '15rem'
