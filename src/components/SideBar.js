@@ -28,9 +28,16 @@ function SideBar() {
                         return (
                             <li style={{padding: '30px',}} key={index} className={item.cName}>
 
-                                <Button variant="contained" style={{fontSize:'15px' ,right:'30px', width:'161px', height: '80px', backgroundColor: '#009688'}} component={Link} to={item.path}>
-                                    <div style={{fontSize:'40px'}}>{item.icon}</div>
-                                    <span>{item.title}</span>
+                                <Button variant="outlined"
+                                        style={{fontSize:'15px' ,right:'30px', width:'161px', height: '80px', backgroundColor: 'rgba(0,150,136,0)'}}
+                                        component={Link}
+                                        to={item.path}>
+                                    <div style={{fontSize:'40px'}}>
+                                      {item.icon}
+                                    </div>
+                                    <span>
+                                      {item.title}
+                                    </span>
                                 </Button>
 
                             </li>
