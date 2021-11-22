@@ -3,7 +3,7 @@ import './components/assets/css/fonts.css'
 import Header from './components/Header.js';
 import Checkout from './components/checkoutComponents/Checkout';
 import SideBar from './components/SideBar';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
 import Pizza from "./components/Pizza.js";
 import basilPizzaImage from './components/assets/images/basil.jpg'
@@ -15,6 +15,7 @@ import margaritaPizzaImage from './components/assets/images/margarita.jpeg'
 import Footer from './components/Footer';
 import BasicModal from './components/ModalCart';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import { paths } from './components/SideBarData';
 
 
 const font = "'Zen Maru Gothic', sans-serif";
@@ -82,13 +83,13 @@ function App() {
     <div className={App}>
       <ThemeProvider theme={theme}>
       <Header />
-
-<Router>
-  <SideBar />
-    <Switch>
-      <Route path='/' />
-    </Switch>
-</Router>
+      
+      <SideBar />
+      <Routes>
+        <Route path='/' />
+        <Route path={paths.PIZZA} element={<Pizza items={pizzas} />} />
+       
+      </Routes>
 
       <Pizza items={pizzas}/>
       <Checkout />
