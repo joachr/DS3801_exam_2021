@@ -9,9 +9,9 @@ import Card from '@material-ui/core/Card';
 import { CardContent, Container } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import HowManyPeople from './HowManyPeople';
-import HeaderButton from './HeaderButton';
+import HeaderButton from '../HeaderAndFooter/HeaderButton';
 import { Modal } from '@material-ui/core';
-import InputField from './checkoutComponents/InputField.js'
+import InputField from '../Checkout/InputField.js'
 
 function ReserveTable({open, onClose, onBackdropClick}) {
     const [value, setValue] = React.useState(new Date('2021-11-22T12:55:54'));

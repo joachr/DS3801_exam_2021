@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import './components/assets/css/fonts.css'
-import Header from './components/Header.js';
-import ReserveTable from './components/ReserveTable';
-/*import Checkout from './components/checkoutComponents/Checkout';
-import Footer from './components/Footer';
+import Header from './components/HeaderAndFooter/Header.js';
+import ReserveTable from './components/Reservation/ReserveTable';
+/*import Checkout from './components/Checkout/Checkout';
+import Footer from './components/HeaderAndFooter/Footer';
 import BasicModal from './components/ModalCart';*/
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
