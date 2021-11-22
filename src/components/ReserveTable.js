@@ -7,6 +7,9 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Card from '@material-ui/core/Card';
 import { CardContent, Container } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
+import HowManyPeople from './HowManyPeople';
+
 
 
 function ReserveTable() {
@@ -27,11 +30,13 @@ function ReserveTable() {
         }}>
             <Card style={{
                 position: 'inherit',
-                width: '30rem',
+                width: '20rem',
             }} 
             open="true">
                 <CardContent>
-                    <Stack spacing={3}>
+                    <Stack spacing={2}>
+                    <h4>Reserver bord</h4>
+                    <Divider variant="middle"></Divider>
                     <DesktopDatePicker
                     label="Date"
                     inputFormat="dd/MM/yyyy"
@@ -45,6 +50,8 @@ function ReserveTable() {
                     onChange={handleChange}
                     renderInput={(params) => <TextField {...params} />}
                     />
+                    <Divider variant="middle"></Divider>
+                    <HowManyPeople></HowManyPeople>
                     </Stack>
                 </CardContent>
             </Card>
