@@ -5,8 +5,7 @@ import EventSeatRoundedIcon from '@material-ui/icons/EventSeatRounded';
 import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from "react";
-import ModalCart from "../ModalCart.js";
-import Cart from "../Cart/Cart.js";
+import { useCart } from "react-use-cart";
 
 const useStyles = makeStyles(() => ({
     header: {
@@ -45,7 +44,7 @@ const useStyles = makeStyles(() => ({
     </Toolbar>;
   };
 
-function Header({ func1, func2 }, props) {
+function Header({ func1, func2, numOfProd }, props) {
     const { header } = useStyles();
   return (
     <div>
@@ -63,12 +62,7 @@ function Header({ func1, func2 }, props) {
         anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
         color="secondary" 
         overlap="circular" 
-        badgeContent={99}>
-
-
-
-
-
+        badgeContent={ useCart().totalItems } >
           <Fab style={{ backgroundColor: '#009688' }} onClick={ func2 }>
             <ShoppingCartOutlinedIcon fontSize="large" style={{
               color: 'black',

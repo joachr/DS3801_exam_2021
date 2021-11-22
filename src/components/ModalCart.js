@@ -12,6 +12,7 @@ import ShopIcon from '@mui/icons-material/Shop';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Cart from "./Cart/Cart.js";
 import {Link} from "react-router-dom";
+import { useCart } from "react-use-cart";
 
 const style = {
     position: 'relative',
@@ -27,7 +28,7 @@ const style = {
 };
 
 
-function ModalCart({open, onClose}) {
+function ModalCart({open, onClose, totalUniItems}) {
 
     return (
         <div>
@@ -38,7 +39,7 @@ function ModalCart({open, onClose}) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Cart/>
+                    <Cart />
                     <Button component={Link} to="/checkOut" style={{
                         color: 'white',
                         backgroundColor: '#009688',

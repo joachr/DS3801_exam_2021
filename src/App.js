@@ -3,7 +3,7 @@ import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/HeaderAndFooter/Header.js';
 import ReserveTable from './components/Reservation/ReserveTable';
-import { CartProvider } from "react-use-cart";
+import { CartProvider, useCart } from "react-use-cart";
 /*import Checkout from './components/Checkout/Checkout';
 import Footer from './components/HeaderAndFooter/Footer';
 import BasicModal from './components/ModalCart';*/
@@ -17,7 +17,8 @@ import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
 import { paths } from './components/SideBarData';
-import Checkout from "./components/Checkout/Checkout";
+import Checkout from "./components/checkoutComponents/Checkout";
+
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -44,7 +45,7 @@ function App() {
     <div className={App}>
       <ThemeProvider theme={theme}>
       <CartProvider>
-      <Header func1={ handleOpen } func2={ handleOpenCart }/>
+      <Header func1={ handleOpen } func2={ handleOpenCart }   />
       <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
       
         {/*<Checkout />*/}
@@ -65,7 +66,7 @@ function App() {
       <ModalCart/>
       <Footer />*/}
         <ModalCart open={openCart}
-                onClose={handleCloseCart} />
+                onClose={handleCloseCart}/>
       </CartProvider>
       </ThemeProvider>
     </div>
