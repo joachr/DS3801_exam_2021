@@ -17,6 +17,7 @@ import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
 import { paths } from './components/SideBarData';
+import Checkout from "./components/Checkout/Checkout";
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -48,6 +49,9 @@ function App() {
       
         {/*<Checkout />*/}
 
+    <Routes>
+        <Route path="/checkOut" element={<Checkout/>}/>
+    </Routes>
 
       <SideBar />
       <Routes>

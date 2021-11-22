@@ -1,7 +1,7 @@
 import React from 'react'
 import { ButtonGroup, Card, CardContent, CardHeader, CardMedia, Container, Dialog, Divider, FormControl } from '@material-ui/core';
-import HeaderButton from '../HeaderButton';
-import InputField from './InputField';
+import InputField from "./InputField";
+import HeaderButton from "../HeaderAndFooter/HeaderButton";
 import Payment from './Payment';
 import { Box } from '@mui/system';
 

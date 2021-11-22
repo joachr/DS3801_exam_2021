@@ -11,6 +11,7 @@ import {CardActions, CardContent, CardMedia, Divider} from '@material-ui/core';
 import ShopIcon from '@mui/icons-material/Shop';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Cart from "./Cart/Cart.js";
+import {Link} from "react-router-dom";
 
 const style = {
     position: 'relative',
@@ -38,7 +39,7 @@ function ModalCart({open, onClose}) {
             >
                 <Box sx={style}>
                     <Cart/>
-                    <Button style={{
+                    <Button component={Link} to="/checkOut" style={{
                         color: 'white',
                         backgroundColor: '#009688',
                         position: 'relative', top: '20px', left: '10rem'
