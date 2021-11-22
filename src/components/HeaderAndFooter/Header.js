@@ -44,7 +44,7 @@ const useStyles = makeStyles(() => ({
     </Toolbar>;
   };
 
-function Header({ func }) {
+function Header({ func1, func2 }) {
     const { header } = useStyles();
   return (
     <div>
@@ -54,7 +54,7 @@ function Header({ func }) {
       justifyContent: 'right',
       backgroundColor: '#FFD148'
     }}>
-        <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord" click={ func }></HeaderButton>
+        <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord" click={ func1 }></HeaderButton>
         <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
        
         <Badge  
@@ -63,7 +63,7 @@ function Header({ func }) {
         overlap="circular" 
         badgeContent="5">
 
-          <Fab style={{ backgroundColor: '#009688' }}>
+          <Fab style={{ backgroundColor: '#009688' }} onClick={ func2 }>
             <ShoppingCartOutlinedIcon fontSize="large" style={{
               color: 'black',
               marginLeft: '0.5em',
@@ -71,7 +71,7 @@ function Header({ func }) {
             }}/>
           </Fab>
         </Badge>
-    </Toolbar>;</AppBar>
+    </Toolbar></AppBar>
     </div>
   );
 }

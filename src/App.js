@@ -32,11 +32,15 @@ function App() {
   const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const [openCart, setOpenCart] = React.useState(false);
+    const handleOpenCart = () => setOpenCart(true);
+    const handleCloseCart = () => setOpenCart(false);
     
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
-      <Header func={ handleOpen }/>
+      <Header func1={ handleOpen } func2={ handleOpenCart }/>
       <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
       <PizzaStorage/>
       <SaladStorage/>
@@ -54,7 +58,8 @@ function App() {
       <Checkout />
       <ModalCart/>
       <Footer />*/}
-        <ModalCart />
+        <ModalCart open={openCart}
+                onClose={handleCloseCart} />
       </ThemeProvider>
     </div>
   );
