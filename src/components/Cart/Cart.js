@@ -1,7 +1,6 @@
 import React from 'react';
 import { useCart } from "react-use-cart";
 import {Typography} from "@material-ui/core";
-import ModalCart from "../ModalCart.js";
 import Button from "@mui/material/Button";
 
 
@@ -34,24 +33,27 @@ const Cart = () => {
 											<img src={item.img} style={{height: "6rem"}}/>
 										</td>
 										<td>{item.title}</td>
-										<td>{item.price}</td>
-										<td>Antall: ({item.quantity})</td>
+										<td>Pris: kr.{item.price},-</td>
 										<td>
 											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
-												color: 'white',
-												borderColor: "white",
+												color: 'black',
+												borderColor: "black",
 												padding: "2px",
 												margin: "3px",
 											}}>-</Button>
+											<span style={{
+												fontWeight: "bold",
+												fontSize: "20px",
+											}}>{item.quantity}</span>
 											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity +1)} style={{
-												color: 'white',
-												borderColor: "white",
+												color: 'black',
+												borderColor: "black",
 												padding: "2px",
 												margin: "3px",
 											}}>+</Button>
 											<Button onClick={() => removeItem(item.id)} style={{
-												color: 'black',
-												backgroundColor: '#fff',
+												color: 'white',
+												backgroundColor: '#d36161',
 											}}>Fjern vare</Button>
 										</td>
 									</tr>
@@ -65,8 +67,8 @@ const Cart = () => {
 				</div>
 				<div>
 					<Button onClick={() => emptyCart()} style={{
-						color: 'black',
-						backgroundColor: '#fff',
+						color: 'white',
+						backgroundColor: '#009688',
 					}}>Tøm handlevognen</Button>
 				</div>
 			</div>

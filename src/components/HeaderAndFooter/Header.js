@@ -59,7 +59,6 @@ function Header({ func1, func2 }, props) {
         <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
         {/*TODO KUN FOR Å SE AT CART FUNGERER*/}
         {/*<HeaderButton icon={<Cart />}/>*/}
-        <Cart/>
         <Badge  
         anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
         color="secondary" 
