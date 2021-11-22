@@ -28,7 +28,7 @@ const style = {
 };
 
 
-function ModalCart({open, onClose, totalUniItems}) {
+function ModalCart({open, onClose}) {
 
     return (
         <div>
@@ -40,7 +40,7 @@ function ModalCart({open, onClose, totalUniItems}) {
             >
                 <Box sx={style}>
                     <Cart />
-                    <Button component={Link} to="/checkOut" style={{
+                    <Button onClick={onClose} component={Link} to="/checkOut" style={{
                         color: 'white',
                         backgroundColor: '#009688',
                         position: 'relative', top: '20px', left: '10rem'
@@ -48,7 +48,7 @@ function ModalCart({open, onClose, totalUniItems}) {
                         Checkout
                     </Button>
 
-                    <Button component={Link} to="/pizza" style={{
+                    <Button onClick={onClose} component={Link} to="/pizza" style={{
                         color: 'white',
                         backgroundColor: '#009688',
                         position: 'relative', top: '20px', left: '15rem'
