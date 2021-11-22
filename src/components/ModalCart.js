@@ -20,9 +20,9 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 710,
+    maxWidth: 710,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: '1px solid #000',
     boxShadow: 24,
     p: 4
 };
@@ -41,9 +41,9 @@ function ModalCart({open, onClose}) {
                 <Box sx={style}>
                     <Cart />
                     <Button onClick={onClose} component={Link} to="/checkOut" style={{
-                        color: 'white',
-                        backgroundColor: '#009688',
-                        position: 'relative', top: '20px', left: '10rem'
+                        color: 'black',
+                        backgroundColor: '#FFD148',
+                        position: 'relative', top: '20px', left: '8rem'
                     }} variant="outlined" endIcon={<ShopIcon />} size={"large"}>
                         Checkout
                     </Button>
@@ -51,7 +51,7 @@ function ModalCart({open, onClose}) {
                     <Button onClick={onClose} component={Link} to="/pizza" style={{
                         color: 'white',
                         backgroundColor: '#009688',
-                        position: 'relative', top: '20px', left: '15rem'
+                        position: 'relative', top: '20px', left: '14rem'
                     }} variant="outlined" endIcon={<AddShoppingCartIcon />} size={"large"}>
                         Fortsett å handle
                     </Button>

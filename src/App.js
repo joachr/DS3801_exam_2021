@@ -28,7 +28,12 @@ const theme = createTheme({
   },
   button: {
     textTransform: "none",
-  }
+  },
+  palette: {
+    info: {
+      main: '#ff0000'
+    },
+  },
 });
 
 

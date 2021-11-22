@@ -46,6 +46,7 @@ const useStyles = makeStyles(() => ({
 
 function Header({ func1, func2, numOfProd }, props) {
     const { header } = useStyles();
+
   return (
     <div>
       <AppBar className={header}><Toolbar style={{
@@ -58,9 +59,9 @@ function Header({ func1, func2, numOfProd }, props) {
         <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
         {/*TODO KUN FOR Å SE AT CART FUNGERER*/}
         {/*<HeaderButton icon={<Cart />}/>*/}
-        <Badge  
+        <Badge
         anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
-        color="secondary" 
+        color="info"
         overlap="circular" 
         badgeContent={ useCart().totalItems } >
           <Fab style={{ backgroundColor: '#009688' }} onClick={ func2 }>

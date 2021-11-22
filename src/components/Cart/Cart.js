@@ -2,9 +2,51 @@ import React from 'react';
 import { useCart } from "react-use-cart";
 import {Typography} from "@material-ui/core";
 import Button from "@mui/material/Button";
+import {makeStyles} from "@material-ui/styles";
 
 
-const Cart = ( ) => {
+const useStyleCart = makeStyles(() => ({
+	textCartContainer: {
+		position: "relative",
+		display: "flex",
+		width: "100%",
+		textAlign: "right",
+		bottom: "4rem",
+		left: "14rem",
+	}
+}));
+
+const useStyleTableRow = makeStyles(() => ({
+	tableRowContainer: {
+		border: "1px solid black",
+		padding: "15px",
+		margin: "10px",
+		height: "8rem",
+	}
+}));
+
+const useStyleTitle = makeStyles(() => ({
+	titleStyling: {
+		position: "relative",
+		left: "14rem",
+		bottom: "100px",
+	}
+}));
+
+const useStyleTotalPrice = makeStyles(() => ( {
+	totalPriceStyling: {
+		position: "relative",
+		left: "9rem",
+	}
+}));
+
+const Cart = () => {
+
+	const { textCartContainer } = useStyleCart();
+	const { tableRowContainer } = useStyleTableRow();
+	const { titleStyling } = useStyleTitle();
+	const { totalPriceStyling } = useStyleTotalPrice();
+
 	const {
 		isEmpty,
 		totalUniqueItems,
@@ -23,50 +65,57 @@ const Cart = ( ) => {
 		<section>
 			<div>
 				<div>
-					<Typography variant={"h5"}>Handlekurv ({totalUniqueItems}) Totalt produkter ({totalItems})</Typography>
-					<table>
-						<tbody>
+					<Typography variant={"h6"}>Handlekurv ({totalUniqueItems}) Totalt produkter ({totalItems})</Typography>
+					<div>
+						<div>
 							{items.map((item, index) => {
 								return(
-									<tr key={index}>
-										<td>
-											<img src={item.img} style={{height: "6rem"}}/>
-										</td>
-										<td>{item.title}</td>
-										<td>Pris: kr.{item.price},-</td>
-										<td>
+									<div className={tableRowContainer} key={index}>
+										<div>
+											<img src={item.img} style={{height: "7rem"}}/>
+										</div>
+										<div className={titleStyling}>
+											<Typography variant={"h5"} component={"div"}>{item.title}</Typography>
+										</div>
+										<div className={textCartContainer}>
+										<Typography style={{fontSize: "20px"}}>Pris: {item.price},-</Typography>
+										<div>
 											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
 												color: 'black',
-												borderColor: "black",
 												padding: "2px",
 												margin: "3px",
 											}}>-</Button>
-											<span style={{
-												fontWeight: "bold",
-												fontSize: "20px",
-											}}>{item.quantity}</span>
+											<div style={{width: "50px", display: "inline-block"}}>
+												<span style={{
+													fontWeight: "bold",
+													position: "relative",
+													fontSize: "20px",
+													right: "19px"
+												}}>{item.quantity}</span>
+											</div>
 											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity +1)} style={{
 												color: 'black',
-												borderColor: "black",
 												padding: "2px",
 												margin: "3px",
 											}}>+</Button>
 											<Button onClick={() => removeItem(item.id)} style={{
 												color: 'white',
 												backgroundColor: '#d36161',
+												left: "2rem",
 											}}>Fjern vare</Button>
-										</td>
-									</tr>
+										</div>
+										</div>
+									</div>
 								)
 							})}
-						</tbody>
-					</table>
+						</div>
+					</div>
+				</div>
+				<div className={totalPriceStyling}>
+					<Typography style={{fontSize: "20px"}}>Totalt beløp: kr.<b>{cartTotal}</b>,- (evt. frakt kalkuleres i kassen)</Typography>
 				</div>
 				<div>
-					<Typography>Total pris: kr.{cartTotal},-</Typography>
-				</div>
-				<div>
-					<Button onClick={() => emptyCart()} style={{
+					<Button size={"small"} onClick={() => emptyCart()} style={{
 						color: 'white',
 						backgroundColor: '#009688',
 					}}>Tøm handlevognen</Button>
@@ -79,3 +128,6 @@ const Cart = ( ) => {
 };
 
 export default Cart;
+
+export class totalUniqueItems {
+}
