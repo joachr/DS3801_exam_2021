@@ -5,8 +5,8 @@ import { MdOutlineLocalPizza } from "react-icons/md";
 
 export const paths = {
     PIZZA: '/pizza',
-    PASTA: '/pasta',
-    DRINKS: '/drikke'
+    SALAD: '/salad',
+    DRINKS: '/drinks'
 }
 
 export const sidebarData = [
@@ -18,8 +18,8 @@ export const sidebarData = [
 
 }, 
 {
-    title: 'Pasta',
-    path: paths.PASTA,
+    title: 'Salad',
+    path: paths.SALAD,
     icon: <GiBowlOfRice />,
     cName: 'nav-text'
 

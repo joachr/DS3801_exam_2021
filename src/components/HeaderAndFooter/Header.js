@@ -21,8 +21,8 @@ const useStyles = makeStyles(() => ({
       justifyContent: 'right',
       backgroundColor: '#FFD148'
     }}>
-        <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord"></HeaderButton>
-        <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
+        <HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord"/>
+        <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
        
         <Badge  
         anchorOrigin={{vertical: 'bottom', horizontal: 'left',}}
@@ -32,7 +32,8 @@ const useStyles = makeStyles(() => ({
 
           <Fab style={{ backgroundColor: '#009688' }}>
 
-            <Cart />
+
+
 
             <ShoppingCartOutlinedIcon fontSize="large" style={{
               color: 'black',
@@ -44,7 +45,7 @@ const useStyles = makeStyles(() => ({
     </Toolbar>;
   };
 
-function Header({ func1, func2 }) {
+function Header({ func1, func2 }, props) {
     const { header } = useStyles();
   return (
     <div>
@@ -54,14 +55,19 @@ function Header({ func1, func2 }) {
       justifyContent: 'right',
       backgroundColor: '#FFD148'
     }}>
-        <HeaderButton icon={<EventSeatRoundedIcon />} text="Reserver bord" click={ func1 }></HeaderButton>
-        <HeaderButton icon={<RestaurantMenuRoundedIcon />} text="Meny"></HeaderButton>
-       
+        <HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord" click={func1}/>
+        <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
+        {/*TODO KUN FOR Å SE AT CART FUNGERER*/}
+        {/*<HeaderButton icon={<Cart />}/>*/}
         <Badge  
-        anchorOrigin={{vertical: 'bottom', horizontal: 'left',}}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
         color="secondary" 
         overlap="circular" 
-        badgeContent="5">
+        badgeContent={99}>
+
+
+
+
 
           <Fab style={{ backgroundColor: '#009688' }} onClick={ func2 }>
             <ShoppingCartOutlinedIcon fontSize="large" style={{
