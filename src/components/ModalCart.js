@@ -75,10 +75,8 @@ const useStyleCard = makeStyles(() => ({
 //const PizzaItem = (props) => {
 
 
-export default function ModalCart() {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+export default function ModalCart({open, onClose}) {
+    
 
     const {pizzaItem} = useStylePizzaItem();
     const {buttonElements} = useStylesButtons();
@@ -99,10 +97,9 @@ export default function ModalCart() {
 
     return (
         <div className={pizzaItem}>
-            <Button onClick={handleOpen}>Open modal</Button>
             <Modal
                 open={open}
-                onClose={handleClose}
+                onClose={onClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
