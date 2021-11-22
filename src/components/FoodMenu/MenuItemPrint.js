@@ -21,12 +21,13 @@ const MenuItemPrint = (props) => {
 		<div className={menuPrint}>
 				{props.items.map((item) => (
 					<MenuItemCard
-						key={item.id}
 						title={item.title}
 						price={item.price}
 						ingredients={item.ingredients}
 						img={item.image}
-						id={item.id}/>
+						id={item.id}
+						item={item}
+						key={item.id}/>
 				))}
 		</div>
 	)

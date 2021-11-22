@@ -10,6 +10,7 @@ import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
 import ModalCart from "./components/ModalCart.js";
+import { CartProvider } from "react-use-cart";
 /*import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
@@ -32,11 +33,13 @@ function App() {
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
-      <Header />
-      <ReserveTable />
-      <PizzaStorage/>
-      <SaladStorage/>
-      <BeverageStorage/>
+        <CartProvider>
+          <Header />
+          <ReserveTable />
+          <PizzaStorage/>
+          <SaladStorage/>
+          <BeverageStorage/>
+        </CartProvider>
         {/*<Checkout />
 
 
