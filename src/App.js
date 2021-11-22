@@ -3,6 +3,7 @@ import './App.css';
 import './components/assets/css/fonts.css'
 import Header from './components/HeaderAndFooter/Header.js';
 import ReserveTable from './components/Reservation/ReserveTable';
+import { CartProvider } from "react-use-cart";
 /*import Checkout from './components/Checkout/Checkout';
 import Footer from './components/HeaderAndFooter/Footer';
 import BasicModal from './components/ModalCart';*/
@@ -11,6 +12,7 @@ import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
 import ModalCart from "./components/ModalCart.js";
+import Cart from "./components/Cart/Cart.js";
 import SideBar from './components/SideBar';
 import {Routes, Route } from 'react-router-dom';
 import {useState} from "react";
@@ -40,6 +42,7 @@ function App() {
   return (
     <div className={App}>
       <ThemeProvider theme={theme}>
+      <CartProvider>
       <Header func1={ handleOpen } func2={ handleOpenCart }/>
       <ReserveTable open={ open } onClose={ handleClose } onBackDropClick={ handleClose }/>
       
@@ -59,6 +62,7 @@ function App() {
       <Footer />*/}
         <ModalCart open={openCart}
                 onClose={handleCloseCart} />
+      </CartProvider>
       </ThemeProvider>
     </div>
   );
