@@ -18,7 +18,7 @@ export const sidebarData = [
 
 }, 
 {
-    title: 'Salad',
+    title: 'Salat',
     path: paths.SALAD,
     icon: <GiBowlOfRice />,
     cName: 'nav-text'
