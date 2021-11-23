@@ -57,6 +57,7 @@ function App() {
 					<Routes>
 						<Route exact path="/" element={<CampaignStorage/>}/>
 					</Routes>
+
 					<Routes>
 						<Route path={paths.PIZZA} element={<PizzaStorage/>}/>
 						<Route path={paths.SALAD} element={<SaladStorage/>}/>
