@@ -20,23 +20,26 @@ function Footer() {
                 bottom:0,
                 left:0,
                 width:'100%',
-                height: '90px',
+                height: '120px',
                 backgroundColor: '#FFD148',
+                marginTop: '150px'
             }}>
                 <Box style={{
+                    position: 'relative',
                     height: '100%',
                     backgroundColor: '#006357',
+                    left: '30px'
                 }}>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        marginTop: '1rem'
+                        marginTop: '1rem',
+                        width: '280px',
                     }}>
                         <ul style={{
                             listStyle: 'none',
                             color: 'white',
-                            fontSize: 'large',
                         }}>
                             <li style={{
                                 marginTop: '0.5rem'
@@ -52,12 +55,12 @@ function Footer() {
                     </div>
                 </Box>
 
-                <FacebookIcon style={{marginTop: '20px' ,marginLeft: '400px', fontSize: '90px', color: '#4267B2'}}/>
-                <InstagramIcon style={{marginTop: '20px' ,fontSize: '90px', color: '#E1306C'}}/>
-                <TwitterIcon style={{marginTop: '20px' ,fontSize: '90px', color: '#1DA1F2'}}/>
+                <FacebookIcon style={{marginTop: '20px' ,marginLeft: '30px', fontSize: '70px', color: '#4267B2'}}/>
+                <InstagramIcon style={{marginTop: '20px' ,fontSize: '70px', color: '#E1306C'}}/>
+                <TwitterIcon style={{marginTop: '20px' ,fontSize: '70px', color: '#1DA1F2'}}/>
             </BottomNavigation>  : (
                 <BottomNavigation style={{
-                    position:'sticky',
+                    position:'fixed',
                     bottom:0,
                     left:0,
                     width:'100%',
@@ -68,7 +71,7 @@ function Footer() {
                     <Box style={{
                         height: '100%',
                         width: '20rem',
-                        backgroundColor: '#009688',
+                        backgroundColor: '#006357',
                     }}>
                         <div style={{
                             display: 'flex',
