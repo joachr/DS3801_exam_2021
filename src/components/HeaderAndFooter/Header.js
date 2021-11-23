@@ -42,17 +42,18 @@ function Header({func1, func2}) {
                 >
                     <FoodBankIcon style={{fontSize: '70px', color: '#009688'}}/>
 
-                    {isMatch ? <Typography/> : (<Typography style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
-                                                     component="div" sx={{mr: 'auto'}}>
-                        Barcelona Pizza & Salad
-                    </Typography>)}
+                    {isMatch ? <Typography/> : (
+                        <Typography
+                            style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
+                            component="div" sx={{mr: 'auto'}}>
+                            Barcelona Pizza & Salad
+                        </Typography>)}
 
                 </IconButton>
 
-                        <HeaderButton text="Hjem" href={'/'}/>
-                        <HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver" click={func1}/>
-                        <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny" href='/pizza'/>
-
+                <HeaderButton text="Hjem" href={'/'}/>
+                <HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver" click={func1}/>
+                <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny" href='/pizza'/>
 
 
                 <Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
