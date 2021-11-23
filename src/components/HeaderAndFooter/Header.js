@@ -17,8 +17,28 @@ const useStyles = makeStyles(() => ({
 	},
 }));
 
+const useStyleName = makeStyles(() => ({
+	nameStyling: {
+		position: "absolute",
+		width: "30rem",
+		display: "flex",
+		justifyContent: "center",
+		left: "5rem",
+	},
+}));
+
+const useStyleLogoAndName = makeStyles(() => ({
+	logoAndNameContainer: {
+		position: "relative",
+		display: "flex",
+		right: "65%",
+	}
+}));
+
 function Header({func1, func2}) {
 	const {header} = useStyles();
+	const {nameStyling} = useStyleName();
+	const {logoAndNameContainer} = useStyleLogoAndName();
 
 	return (
 		<div>
@@ -35,10 +55,10 @@ function Header({func1, func2}) {
 					size="large"
 					edge="start"
 					aria-label="menu"
-					sx={{ mr: 161 }}
+					className={logoAndNameContainer}
 				>
 					<FoodBankIcon style={{fontSize: '70px', color: '#009688'}} />
-					<Typography style={{ font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}} component="div" sx={{ flexGrow: 1 }}>
+					<Typography style={{fontSize: "40px"}} className={nameStyling} component="div">
 						Barcelona Pizza & Salad
 					</Typography>
 				</IconButton>
