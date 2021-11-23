@@ -78,18 +78,18 @@ const MenuItemCard = (props) => {
 	const {cardElement} = useStyleCard();
 	const [quantity, setQuantity] = useState(1);
 
-	function feedBackToUserWhenAddedToCart() {
+	/*function feedBackToUserWhenAddedToCart() {
 
 		return(
-			/*<div>
+			<div>
 				<p className={feedbackElement}>
 					BALLTRYNE
 				</p>
-			</div>*/
+			</div>
 			//FIXME JSX utskrift funker faen ikke her, help, kun vanlig boring alert. -rune
 			alert(props.title + " er lagt til i handlekurven din")
 		)
-	}
+	}*/
 
 	const incrementCounter = () => {
 		setQuantity(quantity + 1);
@@ -135,7 +135,7 @@ const MenuItemCard = (props) => {
 							fontSize: "20px",
 						}}>{quantity}</span>
 						<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-						<Button onClick={() => {addItem(props, quantity); feedBackToUserWhenAddedToCart()}}
+						<Button onClick={() => {addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/}}
 							id={"add-to-card-button"} style={{
 							backgroundColor: '#009688',
 							color: 'white',
