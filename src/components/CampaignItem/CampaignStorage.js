@@ -15,7 +15,7 @@ const INITIAL_PIZZA_CAMPAIGN = [
 
 const CampaignStorage = () => {
 
-	const [pizzas, setPizzas] = useState(INITIAL_PIZZA_CAMPAIGN);
+	const [pizzas] = useState(INITIAL_PIZZA_CAMPAIGN);
 
 	return (
 		<CampaignItemPrint items={pizzas}/>

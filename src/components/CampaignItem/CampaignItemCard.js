@@ -53,18 +53,6 @@ const useStyleCard = makeStyles(() => ({
 	}
 }));
 
-const useStyleFeedback = makeStyles(() => ({
-	feedbackElement: {
-		backgroundColor: "#8AFF83",
-		position: "absolute",
-		width: "100%",
-		zIndex: 10,
-		top: "61px",
-		fontWeight: "bold",
-		fontSize: "large",
-	}
-}));
-
 // mobil oppsett styling
 
 const useStyleMobileCardElement = makeStyles(() => ({
