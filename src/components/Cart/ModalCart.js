@@ -32,7 +32,7 @@ function ModalCart({open, onClose}) {
 
 					<Button onClick={onClose} component={Link} to="/pizza" style={{
 						color: 'white',
-						backgroundColor: '#009688',
+						backgroundColor: '#006357',
 						position: 'relative', top: '20px', left: '17%'
 					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"large"}>
 						Fortsett å handle

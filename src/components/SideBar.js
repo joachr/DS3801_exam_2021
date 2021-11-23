@@ -36,7 +36,7 @@ function SideBar() {
 					<div className={listItems}>
 
 						<Button variant={"contained"} component={Link} to={item.path} style={{
-							backgroundColor: 'rgba(0, 150, 136)',
+							backgroundColor: '#006357',
               position: "relative",
 							color: 'white',
 							margin: '1rem',

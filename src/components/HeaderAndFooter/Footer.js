@@ -15,7 +15,7 @@ function Footer() {
                     <Box style={{
                         height: '100%',
                         width: '20rem',
-                        backgroundColor: '#009688',
+                        backgroundColor: '#006357',
                     }}>
                         <div style={{
                             display: 'flex',

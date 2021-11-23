@@ -14,17 +14,17 @@ const DrawerComponent = () => {
                 onClose={() => setOpenDrawer(false)}
                 open={openDrawer} >
                 <List style={{backgroundColor: '#FFD148'}}>
-                    <ListItem divider button style={{backgroundColor: '#009688'}}>
+                    <ListItem divider button style={{backgroundColor: '#006357'}}>
                         <ListItemIcon>
                             <ListItemText>Courruus</ListItemText>
                         </ListItemIcon>
                     </ListItem>
-                    <ListItem divider button style={{backgroundColor: '#009688'}}>
+                    <ListItem divider button style={{backgroundColor: '#006357'}}>
                         <ListItemIcon>
                             <ListItemText>Courruus</ListItemText>
                         </ListItemIcon>
                     </ListItem>
-                    <ListItem divider button style={{backgroundColor: '#009688'}}>
+                    <ListItem divider button style={{backgroundColor: '#006357'}}>
                         <ListItemIcon>
                             <ListItemText>Courruus</ListItemText>
                         </ListItemIcon>

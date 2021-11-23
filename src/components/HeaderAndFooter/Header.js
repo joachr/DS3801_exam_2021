@@ -40,7 +40,7 @@ function Header({func1, func2}) {
                     aria-label="menu"
                     sx={{mr: 'auto'}}
                 >
-                    <FoodBankIcon style={{fontSize: '70px', color: '#009688'}}/>
+                    <FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
 
                     {isMatch ? <Typography/> : (
                         <Typography
@@ -58,9 +58,9 @@ function Header({func1, func2}) {
 
                 <Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
                        badgeContent={useCart().totalItems}>
-                    <Fab style={{backgroundColor: '#009688'}} onClick={func2}>
+                    <Fab style={{backgroundColor: '#006357'}} onClick={func2}>
                         <ShoppingCartOutlinedIcon fontSize="large" style={{
-                            color: 'black',
+                            color: 'white',
                             marginLeft: '0.5em',
                             marginRight: '0.5em'
                         }}/>

@@ -141,7 +141,7 @@ const CampaignItemCard = (props) => {
 						<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
 						<Button onClick={() => {addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/}}
 						        id={"add-to-card-button"} style={{
-							backgroundColor: '#009688',
+							backgroundColor: '#006357',
 							color: 'white',
 							margin: '1em',
 							width: "30%",

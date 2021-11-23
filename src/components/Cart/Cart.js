@@ -129,7 +129,7 @@ const Cart = () => {
 				<div>
 					<Button size={"small"} onClick={() => emptyCart()} style={{
 						color: 'white',
-						backgroundColor: '#009688',
+						backgroundColor: '#006357',
 					}}>Tøm handlevognen</Button>
 				</div>
 			</div>

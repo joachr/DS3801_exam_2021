@@ -5,7 +5,7 @@ function HeaderButton({text, icon, click, href}) {
     return (
         <div>
             <Button style={{
-            backgroundColor: '#009688',
+            backgroundColor: '#006357',
             color: 'white',
             margin: '1em',
         }} 
