@@ -51,7 +51,7 @@ function App() {
 					<Routes>
 						<Route path="/checkOut" element={<Checkout/>}/>
 					</Routes>
-					<SideBar/>
+					
 					<Routes>
 						<Route exact path="/" element={<Home/>}/>
 					</Routes>

@@ -1,6 +1,6 @@
 import MenuItemCard from "./MenuItemCard.js";
 import {makeStyles} from "@material-ui/styles";
-
+import SideBar from "../SideBar.js";
 
 const useStyles = makeStyles(() => ({
 	menuPrint: {
@@ -17,7 +17,10 @@ const MenuItemPrint = (props) => {
 	const {menuPrint} = useStyles();
 
 	return (
+		<div>
+		<SideBar/>
 		<div className={menuPrint}>
+			
 			{props.items.map((item) => (
 				<MenuItemCard title={item.title}
 				              price={item.price}
@@ -27,7 +30,7 @@ const MenuItemPrint = (props) => {
 				              item={item}
 				              key={item.id}/>
 			))}
-		</div>
+		</div></div>
 	)
 }
 

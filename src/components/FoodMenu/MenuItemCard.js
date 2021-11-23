@@ -4,7 +4,6 @@ import {Button, CardActions, CardContent, CardMedia, Grid, Typography} from "@ma
 import Card from "@mui/material/Card";
 import {useCart} from "react-use-cart";
 
-
 const useStyleCardItem = makeStyles(() => ({
 	cardItem: {
 		position: "relative",
@@ -101,6 +100,7 @@ const MenuItemCard = (props) => {
 	};
 
 	return (
+		
 		<div className={cardItem}>
 			<Card className={cardElement} sx={{minWidth: 420, maxWidth: 580}}>
 				<CardMedia image={props.img} alt="food item" component="img" height="255"
