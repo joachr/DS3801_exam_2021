@@ -22,6 +22,7 @@ const useStyleTableRow = makeStyles(() => ({
 		padding: "15px",
 		margin: "10px",
 		height: "8rem",
+		width: "100%",
 	}
 }));
 
@@ -87,35 +88,35 @@ const Cart = () => {
 										<div className={titleStyling}>
 											<Typography variant={"h5"} component={"div"}>{item.title}</Typography>
 										</div>
-										<div className={textCartContainer}>
-										<Typography style={{fontSize: "20px"}}>Pris: {item.price},-</Typography>
-										<div>
-											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
-												color: 'black',
-												padding: "2px",
-												margin: "3px",
-											}}>-</Button>
-											<div style={{width: "50px", display: "inline-block"}}>
-												<span style={{
-													fontWeight: "bold",
-													position: "relative",
-													fontSize: "20px",
-													right: "19px"
-												}}>{item.quantity}</span>
+											<div className={textCartContainer}>
+												<Typography style={{fontSize: "20px"}}>Pris: {item.price},-</Typography>
+												<div>
+													<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
+														color: 'black',
+														padding: "2px",
+														margin: "3px",
+													}}>-</Button>
+													<div style={{width: "50px", display: "inline-block"}}>
+														<span style={{
+															fontWeight: "bold",
+															position: "relative",
+															fontSize: "20px",
+															right: "19px"
+														}}>{item.quantity}</span>
+													</div>
+													<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity +1)} style={{
+														color: 'black',
+														padding: "2px",
+														margin: "3px",
+													}}>+</Button>
+													<Button onClick={() => removeItem(item.id)} style={{
+														color: 'white',
+														backgroundColor: '#d36161',
+														left: "2rem",
+													}}>Fjern vare</Button>
+													<Divider className={dividerStyling}/>
+												</div>
 											</div>
-											<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity +1)} style={{
-												color: 'black',
-												padding: "2px",
-												margin: "3px",
-											}}>+</Button>
-											<Button onClick={() => removeItem(item.id)} style={{
-												color: 'white',
-												backgroundColor: '#d36161',
-												left: "2rem",
-											}}>Fjern vare</Button>
-											<Divider className={dividerStyling}/>
-										</div>
-										</div>
 									</div>
 								)
 							})}

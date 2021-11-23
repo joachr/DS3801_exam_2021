@@ -29,21 +29,23 @@ function ModalCart({open, onClose}) {
 			       aria-describedby="modal-modal-description">
 				<Box sx={style}>
 					<Cart/>
-					<Button onClick={onClose} component={Link} to="/checkOut" style={{
-						color: 'black',
-						backgroundColor: '#FFD148',
-						position: 'relative', top: '20px', left: '8rem'
-					}} variant="outlined" endIcon={<ShopIcon/>} size={"large"}>
-						Checkout
-					</Button>
 
 					<Button onClick={onClose} component={Link} to="/pizza" style={{
 						color: 'white',
 						backgroundColor: '#009688',
-						position: 'relative', top: '20px', left: '14rem'
+						position: 'relative', top: '20px', left: '17%'
 					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"large"}>
 						Fortsett å handle
 					</Button>
+
+					<Button onClick={onClose} component={Link} to="/checkOut" style={{
+						color: 'black',
+						backgroundColor: '#FFD148',
+						position: 'relative', top: '20px', left: '30%', margin: "20px"
+					}} variant="outlined" endIcon={<ShopIcon/>} size={"large"}>
+						Checkout
+					</Button>
+
 				</Box>
 			</Modal>
 		</div>
