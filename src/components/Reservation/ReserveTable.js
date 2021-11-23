@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Card from '@material-ui/core/Card';
 import { CardContent, Container } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
-import HowManyPeople from '../HowManyPeople';
+import HowManyPeople from './HowManyPeople';
 import HeaderButton from '../HeaderAndFooter/HeaderButton';
 import { Modal } from '@material-ui/core';
 import InputField from '../checkoutComponents/InputField.js'
@@ -51,18 +51,32 @@ function ReserveTable({open, onClose, onBackdropClick}) {
                     <Divider variant="middle"></Divider>
                     <HowManyPeople></HowManyPeople>
                     <Divider variant="middle"></Divider>
+                    <TextField
+                        id="outlined-multiline-static"
+                        label="Andre kommentarer"
+                        multiline
+                        rows={3}
+                    />
+                    <Divider variant="middle"></Divider>
                     <div style={{
+                        marginTop: '5px',
                         display: 'flex',
                         justifyContent: 'center',
                         flexDirection: 'column',
                         alignItems: 'center',
                     }}>
-                        <InputField type='string' placeholder='Fullt navn'></InputField>
-                        <InputField type='string' placeholder='E-post'></InputField>
-                        <InputField type='number' placeholder='Tlf'></InputField>
+                        <TextField label="Navn" type='string' required variant="standard"/>
+                        <TextField label="E-post" type='email' required variant="standard"/>
+                        <TextField label="Mobilnummer" type='tel' required variant="standard"/>
                     </div>
                     <Divider variant="middle"></Divider>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }}>
                     <HeaderButton text='Fullfør reservasjon' click={onClose}></HeaderButton>
+                    </div>
+                    
                     </Stack>
                 </CardContent>
             </Card>
