@@ -18,7 +18,7 @@ const displayDesktop = () => {
 		position: 'relative',
 		alignItems: 'right',
 		justifyContent: 'right',
-		backgroundColor: '#FFD148'
+		backgroundColor: '#FFD148',
 	}}>
 		<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord"/>
 		<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
@@ -47,7 +47,7 @@ function Header({func1, func2}) {
 				position: 'relative',
 				alignItems: 'right',
 				justifyContent: 'right',
-				backgroundColor: '#FFD148'
+				backgroundColor: '#FFD148',
 			}}>
 				<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord" click={func1}/>
 				<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>

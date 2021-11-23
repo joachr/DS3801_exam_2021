@@ -112,7 +112,7 @@ const Cart = () => {
 					</div>
 				</div>
 				<div className={totalPriceStyling}>
-					<Typography style={{fontSize: "20px"}}>Totalt beløp: kr.<b>{cartTotal}</b>,- (evt. frakt kalkuleres i kassen)</Typography>
+					<Typography style={{fontSize: "20px"}}>Totalsum: <b>{cartTotal}</b> kr (evt. frakt kalkuleres i kassen)</Typography>
 				</div>
 				<div>
 					<Button size={"small"} onClick={() => emptyCart()} style={{

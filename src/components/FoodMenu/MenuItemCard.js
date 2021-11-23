@@ -11,7 +11,7 @@ const useStyleCardItem = makeStyles(() => ({
 		display: "flex",
 		flex: "1 1 30%",
 		marginBottom: "2rem",
-		marginLeft: '160px'
+		/*marginLeft: '160px'*/
 	},
 }));
 

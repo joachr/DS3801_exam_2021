@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import ShopIcon from '@mui/icons-material/Shop';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import Cart from "./Cart/Cart.js";
+import Cart from "./Cart.js";
 import {Link} from "react-router-dom";
 
 const style = {

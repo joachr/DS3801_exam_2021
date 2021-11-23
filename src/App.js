@@ -8,7 +8,7 @@ import {createTheme, ThemeProvider} from '@material-ui/core/styles';
 import PizzaStorage from "./components/FoodMenu/PizzaStorage.js";
 import SaladStorage from "./components/FoodMenu/SaladStorage.js";
 import BeverageStorage from "./components/FoodMenu/BeverageStorage.js";
-import ModalCart from "./components/ModalCart.js";
+import ModalCart from "./components/Cart/ModalCart.js";
 import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import {paths} from './components/SideBarData';

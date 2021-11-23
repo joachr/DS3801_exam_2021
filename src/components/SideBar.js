@@ -1,53 +1,63 @@
-import React, {useState} from 'react';
-import * as FaIcons from "react-icons/fa";
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {sidebarData} from './SideBarData';
 import {makeStyles} from "@material-ui/styles";
 import Button from "@mui/material/Button";
-import {Grid} from "@material-ui/core";
+
+
+const useStyleListSidebar = makeStyles(() => ({
+	listItems: {
+		position: "relative",
+		display: "flex",
+		fontSize: '15px',
+	}
+}))
+
+const useStyleSidebar = makeStyles(() => ({
+	sidebarStyle: {
+		position: "sticky",
+    display: "flex",
+    justifyContent: "center",
+    alignSelf: "flex-start",
+    top: "45px",
+	}
+}))
+
 
 function SideBar() {
-    const [sidebar, setSidebar] = useState(false)
+	const {listItems} = useStyleListSidebar();
+	const {sidebarStyle} = useStyleSidebar();
 
-    const showSidebar = () => setSidebar(!sidebar)
-    return (
-        <div className='sidebar' style={{
-            borderRadius: '0px 12px 12px 0px',
-            width: '160px',
-            position: 'fixed',
-            zIndex: 1,
-            top: '220px',
-            overflowX: 'hidden',
-            padding: '8px 0',
-            backgroundColor: '#FFD148',
-        }}>
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <ul className='nav-menu-items'>
+	return (
+		<div className={sidebarStyle}>
 
-                    {sidebarData.map((item, index) => {
-                        return (
-                            <li style={{padding: '30px',}} key={index} className={item.cName}>
+			{sidebarData.map((item) => {
+				return (
+					<div className={listItems}>
 
-                                <Button variant="outlined"
-                                        style={{fontSize:'15px' ,right:'30px', width:'161px', height: '80px', backgroundColor: 'rgba(0,150,136,0)'}}
-                                        component={Link}
-                                        to={item.path}>
-                                    <div style={{fontSize:'40px'}}>
-                                      {item.icon}
-                                    </div>
-                                    <span>
-                                      {item.title}
-                                    </span>
-                                </Button>
+						<Button variant={"outlined"} component={Link} to={item.path} style={{
+							backgroundColor: 'rgba(255,209,72,0.67)',
+              position: "relative",
+							color: 'black',
+							margin: '1rem',
+              display: "inline-block",
+              borderRadius: "0 0 7px 7px",
+						}}>
+							<div style={{fontSize: '40px'}}>
+								{item.icon}
+							</div>
+							<span>
+                {item.title}
+              </span>
+						</Button>
 
-                            </li>
+					</div>
 
-                        )
-                    })}
-                </ul>
-            </nav>
-        </div>
-    );
+				)
+			})}
+
+		</div>
+	);
 }
 
 export default SideBar
