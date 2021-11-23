@@ -67,8 +67,9 @@ function Header({func1, func2}) {
 					</Typography>
 				</IconButton>
 
-				<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord" click={func1}/>
-				<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
+				<HeaderButton  text="Hjem" href={'/'} />
+				<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver" click={func1}/>
+				<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny" href='/pizza'/>
 				<Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
 				       badgeContent={useCart().totalItems}>
 					<Fab style={{backgroundColor: '#009688'}} onClick={func2}>
