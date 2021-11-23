@@ -17,31 +17,6 @@ const useStyles = makeStyles(() => ({
 	},
 }));
 
-const displayDesktop = () => {
-	return <Toolbar style={{
-		position: 'relative',
-		alignItems: 'right',
-		justifyContent: 'right',
-		backgroundColor: '#FFD148',
-	}}>
-		<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord"/>
-		<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
-
-		<Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left',}} color="secondary" overlap="circular"
-		       badgeContent="5">
-
-			<Fab style={{backgroundColor: '#009688'}}>
-
-				<ShoppingCartOutlinedIcon fontSize="large" style={{
-					color: 'black',
-					marginLeft: '0.5em',
-					marginRight: '0.5em'
-				}}/>
-			</Fab>
-		</Badge>
-	</Toolbar>;
-};
-
 function Header({func1, func2}) {
 	const {header} = useStyles();
 
@@ -52,6 +27,7 @@ function Header({func1, func2}) {
 				alignItems: 'right',
 				justifyContent: 'right',
 				backgroundColor: '#FFD148',
+				height: '4.5rem'
 			}}>
 				<IconButton
 					component={Link}

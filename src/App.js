@@ -16,7 +16,6 @@ import Checkout from "./components/checkoutComponents/Checkout";
 import Home from "./components/Home";
 import Footer from './components/HeaderAndFooter/Footer.js';
 
-
 const font = "'Zen Maru Gothic', sans-serif";
 
 const theme = createTheme({
@@ -61,10 +60,10 @@ function App() {
 						<Route path={paths.SALAD} element={<SaladStorage/>}/>
 						<Route path={paths.DRINKS} element={<BeverageStorage/>}/>
 					</Routes>
+					<Footer />
 					<ModalCart open={openCart} onClose={handleCloseCart}/>
 				</CartProvider>
 			</ThemeProvider>
-			<Footer />
 		</div>
 	);
 }
