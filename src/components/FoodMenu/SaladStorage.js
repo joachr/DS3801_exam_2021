@@ -10,44 +10,44 @@ import MenuItemPrint from "./MenuItemPrint.js";
 const INITIAL_SALADS = [
 	{
 		id: "s1",
-		title: "Caesar the great",
+		title: "Caesar the Great",
 		image: caesarthegreatSaladImage,
-		ingredients: "kyllingfilet, tomat, salat mix, egg, parmesan, caesar-saus",
+		ingredients: "kyllingfilet, tomat, salat-mix, egg, parmesan, caesar-saus",
 		price: "139",
 	},
 	{
 		id: "s2",
-		title: "Wakame salat",
+		title: "Wakame-salat",
 		image: wakamesalatSaladImage,
-		ingredients: "wakame salat, nøttesaus, sesamfrø",
+		ingredients: "wakame-salat, nøttesaus, sesamfrø",
 		price: "69",
 	},
 	{
 		id: "s3",
 		title: "Mr. Greek",
 		image: mrgreekSaladImage,
-		ingredients: "tomat, agurk, chili, feta, oliven, salat mix, olivenolje",
+		ingredients: "tomat, agurk, chili, feta, oliven, salat-mix, olivenolje",
 		price: "119",
 	},
 	{
 		id: "s4",
-		title: "Proscuitto salat",
+		title: "Proscuitto-salat",
 		image: proscuittoSaladImage,
-		ingredients: "proscuitto, salat mix, parmesan, cherry tomat, basilikum, basilikum-saus",
+		ingredients: "proscuitto, salat-mix, parmesan, cherrytomat, basilikum, basilikum-saus",
 		price: "139",
 	},
 	{
 		id: "s5",
-		title: "Kalkun salat",
+		title: "Kalkun-salat",
 		image: turkeySaladImage,
-		ingredients: "karamellisert kalkun, cherry tomat, salat mix, appelsinbiter, caesar-saus",
+		ingredients: "karamellisert kalkun, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
 		price: "149"
 	},
 	{
 		id: "s6",
-		title: "Kylling salat",
+		title: "Kylling-salat",
 		image: turkeySaladImage,
-		ingredients: "karamellisert kylling, cherry tomat, salat mix, appelsinbiter, caesar-saus",
+		ingredients: "karamellisert kylling, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
 		price: "139"
 	},
 ];

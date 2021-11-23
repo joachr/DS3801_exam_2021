@@ -46,7 +46,7 @@ const INITIAL_BEVERAGES = [
 	},
 	{
 		id: "b6",
-		title: "Dr. Pepper light",
+		title: "Dr. Pepper Light",
 		image: drpepperlightBeverageImage,
 		ingredients: "0,5l",
 		price: "25",

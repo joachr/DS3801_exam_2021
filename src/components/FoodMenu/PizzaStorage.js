@@ -25,7 +25,7 @@ const INITIAL_PIZZAS = [
 	},
 	{
 		id: "p3",
-		title: "Bacon bed",
+		title: "Bacon Bed",
 		image: baconbedPizzaImage,
 		ingredients: "ost, tomatsaus, spicy pepper, oregano, bacon, og litt mer bacon",
 		price: "199",
@@ -39,14 +39,14 @@ const INITIAL_PIZZAS = [
 	},
 	{
 		id: "p5",
-		title: "Chanterelleheaven",
+		title: "Chanterelle Heaven",
 		image: chanterelleheavenPizzaImage,
 		ingredients: "ost, trøffelsaus, steinsopp, kantareller, sjampinjong, løk",
 		price: "239",
 	},
 	{
 		id: "p6",
-		title: "Deep purple",
+		title: "Deep Purple",
 		image: deeppurplePizzaImage,
 		ingredients: "ost, tomatsaus, lam, salsa, løk, hemmelig saus, basilikum",
 		price: "199",
