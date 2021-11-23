@@ -23,14 +23,15 @@ const useStyleTableRow = makeStyles(() => ({
 		margin: "10px",
 		height: "8rem",
 		width: "100%",
+        marginBottom: "50px"
 	}
 }));
 
 const useStyleTitle = makeStyles(() => ({
 	titleStyling: {
 		position: "relative",
-		left: "14rem",
-		bottom: "120px",
+		left: "10rem",
+		bottom: "80px",
 	}
 }));
 
@@ -46,7 +47,7 @@ const useStyleButton = makeStyles(() => ({
 const useStyleTotalPrice = makeStyles(() => ( {
 	totalPriceStyling: {
 		position: "relative",
-		left: "9rem",
+		marginBottom: "10px",
 	}
 }));
 
@@ -88,7 +89,7 @@ const MobileCart = () => {
 				<div>
 					<Typography variant={"h6"}>Handlekurv ({totalUniqueItems}) Totalt fitte ({totalItems})</Typography>
 					<div>
-						<div>
+						<div >
 							{items.map((item, index) => {
 								return(
 									<div className={tableRowContainer} key={index}>
@@ -99,7 +100,7 @@ const MobileCart = () => {
 											<Typography variant={"h5"} component={"div"}>{item.title}</Typography>
 										</div>
 											<div className={textCartContainer}>
-												<Typography style={{fontSize: "20px", left: "20"}}>Pris: {item.price},-</Typography>
+												<Typography style={{fontSize: "20px", left: "20", marginRight: "5px"}}>Pris: {item.price},-</Typography>
 												<div>
 												<div className={buttonStyling}>
 												<Button variant={"outlined"} onClick={() => updateItemQuantity(item.id, item.quantity -1)} style={{
@@ -139,7 +140,7 @@ const MobileCart = () => {
 				<div className={totalPriceStyling}>
 					<Typography style={{fontSize: "20px"}}>Totalsum: <b>{cartTotal}</b> kr (evt. frakt kalkuleres i kassen)</Typography>
 				</div>
-				<div>
+				<div style={{display: "flex", justifyContent:"center", position: "relative"}}>
 					<Button size={"small"} onClick={() => emptyCart()} style={{
 						color: 'white',
 						backgroundColor: '#006357',
