@@ -13,6 +13,7 @@ import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import {paths} from './components/SideBarData';
 import Checkout from "./components/checkoutComponents/Checkout";
+import Home from "./components/Home";
 
 
 const font = "'Zen Maru Gothic', sans-serif";
@@ -51,6 +52,9 @@ function App() {
 						<Route path="/checkOut" element={<Checkout/>}/>
 					</Routes>
 					<SideBar/>
+					<Routes>
+						<Route exact path="/" element={<Home/>}/>
+					</Routes>
 					<Routes>
 						<Route path={paths.PIZZA} element={<PizzaStorage/>}/>
 						<Route path={paths.SALAD} element={<SaladStorage/>}/>

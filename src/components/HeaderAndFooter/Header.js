@@ -6,6 +6,10 @@ import RestaurantMenuRoundedIcon from '@material-ui/icons/RestaurantMenuRounded'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import React from "react";
 import {useCart} from "react-use-cart";
+import IconButton from '@mui/material/IconButton';
+import FoodBankIcon from '@mui/icons-material/FoodBank';
+import Typography from "@mui/material/Typography";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
 	header: {
@@ -49,6 +53,20 @@ function Header({func1, func2}) {
 				justifyContent: 'right',
 				backgroundColor: '#FFD148',
 			}}>
+				<IconButton
+					component={Link}
+					to="/"
+					size="large"
+					edge="start"
+					aria-label="menu"
+					sx={{ mr: 161 }}
+				>
+					<FoodBankIcon style={{fontSize: '70px', color: 'teal'}} />
+					<Typography style={{ font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}} component="div" sx={{ flexGrow: 1 }}>
+						Barcelona Pizza & Salad
+					</Typography>
+				</IconButton>
+
 				<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver bord" click={func1}/>
 				<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny"/>
 				<Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
