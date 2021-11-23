@@ -23,7 +23,7 @@ function CartForCheckout() {
 							{items.map((item, index) => {
 								return(
 									<tr key={index}>
-										<td>{item.title} kr. {item.price},-</td>
+										<td>{item.title} kr. {item.price},- {item.quantity}stk</td>
 									</tr>
 								)
 							})}
