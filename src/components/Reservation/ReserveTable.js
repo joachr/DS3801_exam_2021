@@ -71,6 +71,8 @@ function ReserveTable({open, onClose, onBackdropClick}) {
                     </div>
                     <Divider variant="middle"></Divider>
                     <div style={{
+                        marginTop: '5px',
+                        marginBottom: '-17px',
                         display: 'flex',
                         justifyContent: 'center',
                     }}>

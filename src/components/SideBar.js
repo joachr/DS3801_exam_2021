@@ -35,10 +35,10 @@ function SideBar() {
 				return (
 					<div className={listItems}>
 
-						<Button variant={"outlined"} component={Link} to={item.path} style={{
-							backgroundColor: 'rgba(255,209,72,0.67)',
+						<Button variant={"contained"} component={Link} to={item.path} style={{
+							backgroundColor: 'rgba(0, 150, 136)',
               position: "relative",
-							color: 'black',
+							color: 'white',
 							margin: '1rem',
               display: "inline-block",
               borderRadius: "0 0 7px 7px",
