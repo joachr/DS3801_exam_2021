@@ -11,7 +11,6 @@ const useStyleCardItem = makeStyles(() => ({
 		display: "flex",
 		flex: "1 1 30%",
 		marginBottom: "2rem",
-		/*marginLeft: '160px'*/
 	},
 }));
 
@@ -54,25 +53,50 @@ const useStyleCard = makeStyles(() => ({
 	}
 }));
 
+const useStyleFeedback = makeStyles(() => ({
+	feedbackElement: {
+		backgroundColor: "#8AFF83",
+		position: "absolute",
+		width: "100%",
+		zIndex: 10,
+		top: "61px",
+		fontWeight: "bold",
+		fontSize: "large",
+	}
+}));
+
 
 const MenuItemCard = (props) => {
 	const {addItem} = useCart();
 
+	const {feedbackElement} = useStyleFeedback();
 
 	const {cardItem} = useStyleCardItem();
 	const {buttonElements} = useStylesButtons();
 	const {textElements} = useStyleText();
 	const {priceElement} = useStylePrice();
 	const {cardElement} = useStyleCard();
+	const [quantity, setQuantity] = useState(1);
 
-	const [counter, setCounter] = useState(1);
+	function feedBackToUserWhenAddedToCart() {
+
+		return(
+			/*<div>
+				<p className={feedbackElement}>
+					BALLTRYNE
+				</p>
+			</div>*/
+			//FIXME JSX utskrift funker faen ikke her, help, kun vanlig boring alert. -rune
+			alert(props.title + " er lagt til i handlekurven din")
+		)
+	}
 
 	const incrementCounter = () => {
-		setCounter(counter + 1);
+		setQuantity(quantity + 1);
 	};
 	const decrementCounter = () => {
-		if (counter > 1) {
-			setCounter(counter - 1);
+		if (quantity > 1) {
+			setQuantity(quantity - 1);
 		}
 	};
 
@@ -109,9 +133,10 @@ const MenuItemCard = (props) => {
 							justifyContent: "center",
 							fontWeight: "bold",
 							fontSize: "20px",
-						}}>{counter}</span>
+						}}>{quantity}</span>
 						<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-						<Button onClick={() => addItem(props, counter)} id={"add-to-card-button"} style={{
+						<Button onClick={() => {addItem(props, quantity); feedBackToUserWhenAddedToCart()}}
+							id={"add-to-card-button"} style={{
 							backgroundColor: '#009688',
 							color: 'white',
 							margin: '1em',
@@ -123,6 +148,7 @@ const MenuItemCard = (props) => {
 		</div>
 	);
 }
+
 
 
 export default MenuItemCard;
