@@ -87,7 +87,7 @@ const MobileCart = () => {
 		<section>
 			<div>
 				<div>
-					<Typography variant={"h6"}>Handlekurv ({totalUniqueItems}) Totalt fitte ({totalItems})</Typography>
+					<Typography variant={"h6"}>Handlekurv ({totalUniqueItems}) Totalt produkter ({totalItems})</Typography>
 					<div>
 						<div >
 							{items.map((item, index) => {
@@ -143,7 +143,8 @@ const MobileCart = () => {
 				<div style={{display: "flex", justifyContent:"center", position: "relative"}}>
 					<Button size={"small"} onClick={() => emptyCart()} style={{
 						color: 'white',
-						backgroundColor: '#006357',
+						backgroundColor: '#d36161',
+                        padding: "8px"
 					}}>Tøm handlevognen</Button>
 				</div>
 			</div>

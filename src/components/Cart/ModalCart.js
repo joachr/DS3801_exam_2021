@@ -37,22 +37,23 @@ function ModalCart({open, onClose}) {
 				<Box sx={style}>
 					<MobileCart/>
 
+					<div style={{justifyContent: "space-between", display: "flex"}}>	
 					<Button onClick={onClose} component={Link} to="/pizza" style={{
-						color: 'white',
-						backgroundColor: '#006357',
-						position: 'relative', top: '20px', left: '17%'
-					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"large"}>
-						Fortsett å handle
+						color: 'black',
+						backgroundColor: '#FFD148',
+						position: 'relative', top: '20px',
+					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"medium"}>
+						Fortsett å surfe
 					</Button>
 
 					<Button onClick={onClose} component={Link} to="/checkOut" style={{
-						color: 'black',
-						backgroundColor: '#FFD148',
-						position: 'relative', top: '20px', left: '30%', margin: "20px"
+						color: 'white',
+						backgroundColor: '#006357',
+						position: 'relative', top: '20px',
 					}} variant="outlined" endIcon={<ShopIcon/>} size={"large"}>
-						Checkout
+						Til Betaling
 					</Button>
-
+					</div>
 				</Box>
 			</Modal>: (
 					<Modal style={{overflow: "scroll"}} open={open} onClose={onClose} aria-labelledby="modal-modal-title"
@@ -60,22 +61,23 @@ function ModalCart({open, onClose}) {
 				<Box sx={style}>
 					<Cart/>
 
+					<div style={{justifyContent: "space-between", display: "flex"}}>
 					<Button onClick={onClose} component={Link} to="/pizza" style={{
-						color: 'white',
-						backgroundColor: '#006357',
-						position: 'relative', top: '20px', left: '17%'
+						color: 'black',
+						backgroundColor: '#FFD148',
+						position: 'relative', top: '20px'
 					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"large"}>
 						Fortsett å handle
 					</Button>
 
 					<Button onClick={onClose} component={Link} to="/checkOut" style={{
-						color: 'black',
-						backgroundColor: '#FFD148',
-						position: 'relative', top: '20px', left: '30%', margin: "20px"
+						color: 'white',
+						backgroundColor: '#006357',
+						position: 'relative', top: '20px'
 					}} variant="outlined" endIcon={<ShopIcon/>} size={"large"}>
-						Checkout
+						Gå til betaling
 					</Button>
-
+					</div>
 				</Box>
 			</Modal>
 			)}
