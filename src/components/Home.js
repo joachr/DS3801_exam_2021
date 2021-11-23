@@ -33,16 +33,19 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Container maxWidth="md">
-
-            <Card sx={{ position: 'relative', width: '100%', flexDirection: 'column', display: 'flex',maxWidth: 678, mt: 20 }}>
+        <Container maxWidth="md" style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+            <Card sx={{ position: 'relative', width: '100%', flexDirection: 'column', display: 'flex', maxWidth: 678, mt: 20 }}>
                 <CardHeader
                 action={
                     <IconButton aria-label="settings">
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="Denne måndens Tilbud!"
+                title="Denne månedens tilbud!"
                 subheader="Hver måned har vi saftige tilbud"
                 style={{ backgroundColor: '#FFD148', borderBottom: '1mm ridge rgb(0, 0, 0, 0.6)'}}
             />
