@@ -3,6 +3,7 @@ import { useCart } from "react-use-cart";
 import {Typography} from "@material-ui/core";
 import Button from "@mui/material/Button";
 import {makeStyles} from "@material-ui/styles";
+import Divider from "@material-ui/core/Divider";
 
 
 const useStyleCart = makeStyles(() => ({
@@ -18,7 +19,6 @@ const useStyleCart = makeStyles(() => ({
 
 const useStyleTableRow = makeStyles(() => ({
 	tableRowContainer: {
-		border: "1px solid black",
 		padding: "15px",
 		margin: "10px",
 		height: "8rem",
@@ -40,12 +40,22 @@ const useStyleTotalPrice = makeStyles(() => ( {
 	}
 }));
 
+const useStyleDivider = makeStyles(() => ({
+	dividerStyling: {
+		position: "absolute",
+		width: "100%",
+		height: "10px",
+		right: "15rem",
+	}
+}));
+
 const Cart = () => {
 
 	const { textCartContainer } = useStyleCart();
 	const { tableRowContainer } = useStyleTableRow();
 	const { titleStyling } = useStyleTitle();
 	const { totalPriceStyling } = useStyleTotalPrice();
+	const { dividerStyling } = useStyleDivider();
 
 	const {
 		isEmpty,
@@ -103,6 +113,7 @@ const Cart = () => {
 												backgroundColor: '#d36161',
 												left: "2rem",
 											}}>Fjern vare</Button>
+											<Divider className={dividerStyling}/>
 										</div>
 										</div>
 									</div>
