@@ -14,6 +14,7 @@ import {Route, Routes} from 'react-router-dom';
 import {paths} from './components/SideBarData';
 import Checkout from "./components/checkoutComponents/Checkout";
 import Home from "./components/Home";
+import Footer from './components/HeaderAndFooter/Footer.js';
 
 
 const font = "'Zen Maru Gothic', sans-serif";
@@ -63,6 +64,7 @@ function App() {
 					<ModalCart open={openCart} onClose={handleCloseCart}/>
 				</CartProvider>
 			</ThemeProvider>
+			<Footer />
 		</div>
 	);
 }
