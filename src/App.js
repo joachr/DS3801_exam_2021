@@ -13,8 +13,10 @@ import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import {paths} from './components/SideBarData';
 import Checkout from "./components/checkoutComponents/Checkout";
-import Home from "./components/Home";
+import CampaignItemPrint from "./components/CampaignItem/CampaignItemPrint.js";
 import Footer from './components/HeaderAndFooter/Footer.js';
+import CampaignItemCard from "./components/CampaignItem/CampaignItemCard.js";
+import CampaignStorage from "./components/CampaignItem/CampaignStorage.js";
 
 const font = "'Zen Maru Gothic', sans-serif";
 
@@ -53,7 +55,7 @@ function App() {
 					</Routes>
 					
 					<Routes>
-						<Route exact path="/" element={<Home/>}/>
+						<Route exact path="/" element={<CampaignStorage/>}/>
 					</Routes>
 					<Routes>
 						<Route path={paths.PIZZA} element={<PizzaStorage/>}/>

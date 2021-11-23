@@ -6,6 +6,7 @@ import cadonationPizzaImage from "../assets/images/pizzas/cadonation.jpg";
 import chanterelleheavenPizzaImage from "../assets/images/pizzas/chanterelleheaven.jpg";
 import deeppurplePizzaImage from "../assets/images/pizzas/deeppurple.jpg";
 import MenuItemPrint from "./MenuItemPrint.js";
+import CampaignItemPrint from "../CampaignItem/CampaignItemPrint.js";
 
 
 const INITIAL_PIZZAS = [
