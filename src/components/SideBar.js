@@ -16,10 +16,11 @@ const useStyleListSidebar = makeStyles(() => ({
 const useStyleSidebar = makeStyles(() => ({
 	sidebarStyle: {
 		position: "sticky",
-    display: "flex",
-    justifyContent: "center",
-    alignSelf: "flex-start",
-    top: "45px",
+		display: "flex",
+		justifyContent: "center",
+		alignSelf: "flex-start",
+		top: "45px",
+		zIndex: '1'
 	}
 }))
 

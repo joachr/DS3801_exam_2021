@@ -33,10 +33,10 @@ function Footer() {
                             }}>Tlf: 90 34 34 34</li>
                             <li style={{
                                 marginTop: '0.5rem'
-                            }}>E-post: strandpizza@gmail.com</li>
+                            }}>E-post: barcelonapizza@gmail.com</li>
                             <li style={{
                                 marginTop: '0.5rem'
-                            }}>Adresse: Strandveien 4, 0000, Strand</li>
+                            }}>Adresse: Barcelonaveien 4, 0000, Barcelona</li>
                             </ul>
                         </div>
                     </Box>
