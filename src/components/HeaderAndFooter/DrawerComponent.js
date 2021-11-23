@@ -3,7 +3,6 @@ import {Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText} from "@m
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-
 const DrawerComponent = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -12,7 +11,7 @@ const DrawerComponent = () => {
             <Drawer
                 anchor='right'
                 onClose={() => setOpenDrawer(false)}
-                open={openDrawer} >
+                open={openDrawer}>
                 <List style={{backgroundColor: '#FFD148'}}>
                     <ListItem divider button style={{backgroundColor: '#006357'}}>
                         <ListItemIcon>

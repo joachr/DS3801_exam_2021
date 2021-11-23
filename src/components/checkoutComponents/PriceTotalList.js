@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography'
 
-function PriceTotalList( { tips, frakt, subTotal, total }) {
+function PriceTotalList({tips, frakt, subTotal, total}) {
 
     return (
         <Typography style={{
@@ -15,17 +15,21 @@ function PriceTotalList( { tips, frakt, subTotal, total }) {
                 letterSpacing: '0.15rem'
             }}>
                 <li style={{
-                margin: '0.2rem'
-                }}>Subtotal: { subTotal }kr </li>
+                    margin: '0.2rem'
+                }}>Subtotal: {subTotal}kr
+                </li>
                 <li style={{
-                margin: '0.2rem'
-                }}>Frakt: { frakt }kr</li>
+                    margin: '0.2rem'
+                }}>Frakt: {frakt}kr
+                </li>
                 <li style={{
-                margin: '0.2rem'
-                }} >Tips: { tips }kr</li>
+                    margin: '0.2rem'
+                }}>Tips: {tips}kr
+                </li>
                 <li style={{
-                margin: '0.2rem'
-                }}>Total: { total }kr</li>
+                    margin: '0.2rem'
+                }}>Total: {total}kr
+                </li>
             </ul>
         </Typography>
     )

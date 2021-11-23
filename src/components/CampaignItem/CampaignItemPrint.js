@@ -5,36 +5,35 @@ import CampaignItemCard from "./CampaignItemCard.js";
 
 
 const useStyles = makeStyles(() => ({
-  menuPrint: {
-    position: "relative",
-    display: "flex",
-    flexWrap: "wrap",
-    width: "100%",
-    top: "8rem",
-  },
+    menuPrint: {
+        position: "relative",
+        display: "flex",
+        flexWrap: "wrap",
+        width: "100%",
+        top: "8rem",
+    },
 }));
 
 const CampaignItemPrint = (props) => {
 
-  const {menuPrint} = useStyles();
-
+    const {menuPrint} = useStyles();
 
 
     return (
-      <div>
-        <div className={menuPrint}>
+        <div>
+            <div className={menuPrint}>
 
-          {props.items.map((item) => (
-            <CampaignItemCard title={item.title}
-                          price={item.price}
-                          ingredients={item.ingredients}
-                          img={item.image}
-                          id={item.id}
-                          item={item}
-                          key={item.id}/>
-          ))}
+                {props.items.map((item) => (
+                    <CampaignItemCard title={item.title}
+                                      price={item.price}
+                                      ingredients={item.ingredients}
+                                      img={item.image}
+                                      id={item.id}
+                                      item={item}
+                                      key={item.id}/>
+                ))}
+            </div>
         </div>
-      </div>
     );
 }
 
