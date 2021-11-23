@@ -42,9 +42,6 @@ function Header({func1, func2}) {
                     <FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
 
 
-                    {isMatch ? 1 : (<Typography>Hey</Typography>)}
-
-
                     {isMatch ? <Typography/> : (
                         <Typography
                             style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}

@@ -1,4 +1,4 @@
-import { Input } from '@material-ui/core'
+import {Input} from '@material-ui/core'
 import React from 'react'
 
 function InputField({type, placeholder}) {
@@ -6,7 +6,7 @@ function InputField({type, placeholder}) {
         <div style={{
             width: '50%'
         }}>
-            <Input 
+            <Input
                 style={{
                     marginTop: '0.5rem',
                     marginBottom: '0.5rem',
