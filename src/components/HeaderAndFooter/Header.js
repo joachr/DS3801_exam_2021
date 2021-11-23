@@ -61,7 +61,7 @@ function Header({func1, func2}) {
 					aria-label="menu"
 					sx={{ mr: 161 }}
 				>
-					<FoodBankIcon style={{fontSize: '70px', color: 'teal'}} />
+					<FoodBankIcon style={{fontSize: '70px', color: '#009688'}} />
 					<Typography style={{ font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}} component="div" sx={{ flexGrow: 1 }}>
 						Barcelona Pizza & Salad
 					</Typography>

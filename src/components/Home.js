@@ -6,10 +6,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -37,7 +35,7 @@ export default function RecipeReviewCard() {
     return (
         <Container maxWidth="md">
 
-            <Card sx={{ maxWidth: 678, mt: 20 }}>
+            <Card sx={{ position: 'relative', width: '100%', flexDirection: 'column', display: 'flex',maxWidth: 678, mt: 20 }}>
                 <CardHeader
                 action={
                     <IconButton aria-label="settings">
@@ -46,21 +44,28 @@ export default function RecipeReviewCard() {
                 }
                 title="Denne måndens Tilbud!"
                 subheader="Hver måned har vi saftige tilbud"
+                style={{ backgroundColor: '#FFD148', borderBottom: '1mm ridge rgb(0, 0, 0, 0.6)'}}
             />
             <CardMedia
                 component="img"
+                sx={{width: 250}}
                 height="194"
-                image="/static/images/cards/paella.jpg"
+                image="https://previews.123rf.com/images/danilsneg/danilsneg1706/danilsneg170600158/81077084-pepperoni-pizza-italian-pizza-on-white-background-.jpg"
                 alt="Paella dish"
             />
+           <div style={{ position: "absolute",
+               top: '35%',
+               width: "60%",
+               left: "35%"}}>
             <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography  color="text.secondary">
                     This impressive paella is a perfect party dish and a fun meal to cook
                     together with your guests. Add 1 cup of frozen peas along with the mussels,
                     if you like.
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing>
+           </div>
+            <CardActions disableSpacing style={{backgroundColor: '#FFD148'}}>
                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>
