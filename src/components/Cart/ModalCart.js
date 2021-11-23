@@ -42,7 +42,7 @@ function ModalCart({open, onClose}) {
 						backgroundColor: '#006357',
 						position: 'relative', top: '20px', left: '17%'
 					}} variant="outlined" endIcon={<AddShoppingCartIcon/>} size={"large"}>
-						Fitte å fitte
+						Fortsett å handle
 					</Button>
 
 					<Button onClick={onClose} component={Link} to="/checkOut" style={{
@@ -50,7 +50,7 @@ function ModalCart({open, onClose}) {
 						backgroundColor: '#FFD148',
 						position: 'relative', top: '20px', left: '30%', margin: "20px"
 					}} variant="outlined" endIcon={<ShopIcon/>} size={"large"}>
-						Fitte
+						Checkout
 					</Button>
 
 				</Box>

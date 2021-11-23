@@ -30,7 +30,7 @@ function Header({func1, func2}) {
                 alignItems: 'right',
                 justifyContent: 'right',
                 backgroundColor: '#FFD148',
-                height: '4.5rem'
+                height: '4.5rem',
             }}>
                 <IconButton
                     component={Link}
