@@ -10,7 +10,6 @@ import IconButton from '@mui/material/IconButton';
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
-import DrawerComponent from "./DrawerComponent";
 
 const useStyles = makeStyles(() => ({
     header: {
@@ -41,6 +40,10 @@ function Header({func1, func2}) {
                     sx={{mr: 'auto'}}
                 >
                     <FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
+
+
+                    {isMatch ? 1 : (<Typography>Hey</Typography>)}
+
 
                     {isMatch ? <Typography/> : (
                         <Typography
