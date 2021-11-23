@@ -9,57 +9,57 @@ import MenuItemPrint from "./MenuItemPrint.js";
 
 
 const INITIAL_BEVERAGES = [
-    {
-        id: "b1",
-        title: "Coca Cola",
-        image: cokeBeverageImage,
-        ingredients: "0,5l",
-        price: "25",
-    },
-    {
-        id: "b2",
-        title: "Burn",
-        image: burnBeverageImage,
-        ingredients: "0,5l",
-        price: "25",
-    },
-    {
-        id: "b3",
-        title: "Imsdal",
-        image: imsdalBeverageImage,
-        ingredients: "0,5l",
-        price: "20",
-    },
-    {
-        id: "b4",
-        title: "Sprite",
-        image: spriteBeverageImage,
-        ingredients: "0,5l",
-        price: "25",
-    },
-    {
-        id: "b5",
-        title: "Dr. Pepper",
-        image: drpepperBeverageImage,
-        ingredients: "0,5l",
-        price: "25",
-    },
-    {
-        id: "b6",
-        title: "Dr. Pepper Light",
-        image: drpepperlightBeverageImage,
-        ingredients: "0,5l",
-        price: "25",
-    },
+	{
+		id: "b1",
+		title: "Coca Cola",
+		image: cokeBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
+	{
+		id: "b2",
+		title: "Burn",
+		image: burnBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
+	{
+		id: "b3",
+		title: "Imsdal",
+		image: imsdalBeverageImage,
+		ingredients: "0,5l",
+		price: "20",
+	},
+	{
+		id: "b4",
+		title: "Sprite",
+		image: spriteBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
+	{
+		id: "b5",
+		title: "Dr. Pepper",
+		image: drpepperBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
+	{
+		id: "b6",
+		title: "Dr. Pepper Light",
+		image: drpepperlightBeverageImage,
+		ingredients: "0,5l",
+		price: "25",
+	},
 ];
 
 const BeverageStorage = () => {
 
-    const [beverages, setBeverages] = useState(INITIAL_BEVERAGES);
+	const [beverages] = useState(INITIAL_BEVERAGES);
 
-    return (
-        <MenuItemPrint items={beverages}/>
-    );
+	return (
+		<MenuItemPrint items={beverages}/>
+	);
 }
 
 export default BeverageStorage;

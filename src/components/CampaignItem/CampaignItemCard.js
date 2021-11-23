@@ -1,15 +1,6 @@
 import React, {useState} from "react";
 import {makeStyles} from '@material-ui/styles';
-import {
-	Button,
-	CardActions,
-	CardContent,
-	CardMedia,
-	Grid,
-	Typography,
-	useMediaQuery,
-	useTheme
-} from "@material-ui/core";
+import {Button, CardActions, CardContent, CardMedia, Typography, useMediaQuery, useTheme} from "@material-ui/core";
 import Card from "@mui/material/Card";
 import {useCart} from "react-use-cart";
 
@@ -74,7 +65,7 @@ const useStyleFeedback = makeStyles(() => ({
 	}
 }));
 
-//TODO MOBIL OPPSETT UNDER
+// mobil oppsett styling
 
 const useStyleMobileCardElement = makeStyles(() => ({
 	mobileCardElement: {
@@ -130,15 +121,13 @@ const CampaignItemCard = (props) => {
 	const {addItem} = useCart();
 	const [quantity, setQuantity] = useState(1);
 
-	/*const {feedbackElement} = useStyleFeedback();*/
-
 	const {cardItem} = useStyleCardItem();
 	const {buttonElements} = useStylesButtons();
 	const {textElements} = useStyleText();
 	const {priceElement} = useStylePrice();
 	const {cardElement} = useStyleCard();
 
-	//TODO MOBIL OPPSETT UNDER
+	// mobil oppsett
 
 	const {mobileCardElement} = useStyleMobileCardElement();
 	const {mobileTextElements} = useStyleMobileTextElements();
@@ -167,11 +156,7 @@ const CampaignItemCard = (props) => {
 
 				<div className={mobileCardItem} style={{width: "200px"}}>
 					<Card className={mobileCardElement}>
-						<CardMedia image={props.img}
-						           alt="food item"
-						           component="img"
-						           height="150"
-						           style={{maxWidth: "12rem"}}/>
+						<CardMedia image={props.img} alt="food item" component="img" height="150" style={{maxWidth: "12rem"}}/>
 						<div className={mobileTextElements}>
 							<CardContent>
 								<div>
@@ -203,8 +188,9 @@ const CampaignItemCard = (props) => {
 									margin: "5px",
 								}}>{quantity}</span>
 								<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-								<Button onClick={() => {addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/}}
-								        id={"add-to-card-button"} style={{
+								<Button onClick={() => {
+									addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/
+								}} id={"add-to-card-button"} style={{
 									backgroundColor: '#006357',
 									color: 'white',
 									width: "30%",
@@ -215,57 +201,54 @@ const CampaignItemCard = (props) => {
 				</div>
 				: (
 					<div className={cardItem}>
-			<Card className={cardElement}>
-				<CardMedia image={props.img}
-				           alt="food item"
-				           component="img"
-				           height="255"
-				           style={{maxWidth: "20rem"}}/>
-				<div className={textElements}>
-					<CardContent>
-						<div>
-							<Typography variant="h4" component="div">
-								{props.title}
-							</Typography>
-						</div>
-						<div>
-							<Typography>
-								{props.ingredients}
-							</Typography>
-						</div>
-					</CardContent>
-				</div>
-				<div className={buttonElements}>
-					<div className={priceElement}>
-						<Typography style={{fontSize: "17px"}}>
-							Før: 199,-. <Typography style={{fontWeight: "bold", fontSize: "27px"}}>NÅ {props.price},-!</Typography>
-						</Typography>
-					</div>
-					<CardActions>
-						<Button onClick={decrementCounter} size={"small"} variant={"outlined"}>-</Button>
-						<span style={{
-							width: "2rem",
-							display: "flex",
-							justifyContent: "center",
-							fontWeight: "bold",
-							fontSize: "20px",
-						}}>{quantity}</span>
-						<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
-						<Button onClick={() => {addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/}}
-						        id={"add-to-card-button"} style={{
-							backgroundColor: '#006357',
-							color: 'white',
-							margin: '1em',
-							width: "30%",
-						}}>Legg til</Button>
-					</CardActions>
-				</div>
-			</Card>
-		</div>)}
+						<Card className={cardElement}>
+							<CardMedia image={props.img} alt="food item" component="img" height="255" style={{maxWidth: "20rem"}}/>
+							<div className={textElements}>
+								<CardContent>
+									<div>
+										<Typography variant="h4" component="div">
+											{props.title}
+										</Typography>
+									</div>
+									<div>
+										<Typography>
+											{props.ingredients}
+										</Typography>
+									</div>
+								</CardContent>
+							</div>
+							<div className={buttonElements}>
+								<div className={priceElement}>
+									<Typography style={{fontSize: "17px"}}>
+										Før: 199,-. <Typography
+										style={{fontWeight: "bold", fontSize: "27px"}}>NÅ {props.price},-!</Typography>
+									</Typography>
+								</div>
+								<CardActions>
+									<Button onClick={decrementCounter} size={"small"} variant={"outlined"}>-</Button>
+									<span style={{
+										width: "2rem",
+										display: "flex",
+										justifyContent: "center",
+										fontWeight: "bold",
+										fontSize: "20px",
+									}}>{quantity}</span>
+									<Button size={"small"} variant={"outlined"} onClick={incrementCounter}>+</Button>
+									<Button onClick={() => {
+										addItem(props, quantity); /*feedBackToUserWhenAddedToCart()*/
+									}} id={"add-to-card-button"} style={{
+										backgroundColor: '#006357',
+										color: 'white',
+										margin: '1em',
+										width: "30%",
+									}}>Legg til</Button>
+								</CardActions>
+							</div>
+						</Card>
+					</div>)}
 		</>
 	);
 }
-
 
 
 export default CampaignItemCard;

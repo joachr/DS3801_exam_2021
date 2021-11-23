@@ -1,4 +1,4 @@
-EKSAMEN GRENSESNITTDESIGN HØST 2021
+EKSAMEN GRENSESNITTDESIGN DS3801 HØST 2021
 
 Åpne prosjektet i en IDE og kjør først npm install, så npm start i terminalen
 

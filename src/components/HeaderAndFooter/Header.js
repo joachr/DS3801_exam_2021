@@ -12,63 +12,56 @@ import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
-    header: {
-        backgroundColor: "#FFD148",
-    },
+	header: {
+		backgroundColor: "#FFD148",
+	},
 }));
 
 
 function Header({func1, func2}) {
-    const {header} = useStyles();
-    const theme = useTheme();
-    const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+	const {header} = useStyles();
+	const theme = useTheme();
+	const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
-    return (
-        <div>
-            <AppBar className={header}><Toolbar style={{
-                position: 'relative',
-                alignItems: 'right',
-                justifyContent: 'right',
-                backgroundColor: '#FFD148',
-                height: '4.5rem',
-            }}>
-                <IconButton
-                    component={Link}
-                    to="/"
-                    size="large"
-                    aria-label="menu"
-                    sx={{mr: 'auto'}}
-                >
-                    <FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
+	return (
+		<div>
+			<AppBar className={header}><Toolbar style={{
+				position: 'relative',
+				alignItems: 'right',
+				justifyContent: 'right',
+				backgroundColor: '#FFD148',
+				height: '4.5rem',
+			}}>
+				<IconButton component={Link} to="/" size="large" aria-label="menu" sx={{mr: 'auto'}}>
+					<FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
 
 
-                    {isMatch ? <Typography/> : (
-                        <Typography
-                            style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
-                            component="div" sx={{mr: 'auto'}}>
-                            Barcelona Pizza & Salad
-                        </Typography>)}
+					{isMatch ? <Typography/> : (
+						<Typography style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
+						            component="div" sx={{mr: 'auto'}}>
+							Pizzeria Bella
+						</Typography>)}
 
-                </IconButton>
+				</IconButton>
 
-                <HeaderButton text="Hjem" href={'/'}/>
-                <HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver" click={func1}/>
-                <HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny" href='/pizza'/>
+				<HeaderButton text="Hjem" href={'/'}/>
+				<HeaderButton icon={<EventSeatRoundedIcon/>} text="Reserver" click={func1}/>
+				<HeaderButton icon={<RestaurantMenuRoundedIcon/>} text="Meny" href="/pizza"/>
 
 
-                <Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
-                       badgeContent={useCart().totalItems}>
-                    <Fab style={{backgroundColor: '#006357'}} onClick={func2}>
-                        <ShoppingCartOutlinedIcon fontSize="large" style={{
-                            color: 'white',
-                            marginLeft: '0.5em',
-                            marginRight: '0.5em'
-                        }}/>
-                    </Fab>
-                </Badge>
-            </Toolbar></AppBar>
-        </div>
-    );
+				<Badge anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} color="info" overlap="circular"
+				       badgeContent={useCart().totalItems}>
+					<Fab style={{backgroundColor: '#006357'}} onClick={func2}>
+						<ShoppingCartOutlinedIcon fontSize="large" style={{
+							color: 'white',
+							marginLeft: '0.5em',
+							marginRight: '0.5em'
+						}}/>
+					</Fab>
+				</Badge>
+			</Toolbar></AppBar>
+		</div>
+	);
 }
 
 export default Header

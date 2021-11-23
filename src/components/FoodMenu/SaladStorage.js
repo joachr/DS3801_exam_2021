@@ -8,57 +8,57 @@ import MenuItemPrint from "./MenuItemPrint.js";
 
 
 const INITIAL_SALADS = [
-    {
-        id: "s1",
-        title: "Caesar the Great",
-        image: caesarthegreatSaladImage,
-        ingredients: "Kyllingfilet, tomat, salat-mix, egg, parmesan, caesar-saus",
-        price: "139",
-    },
-    {
-        id: "s2",
-        title: "Wakame-salat",
-        image: wakamesalatSaladImage,
-        ingredients: "Wakame-salat, nøttesaus, sesamfrø",
-        price: "69",
-    },
-    {
-        id: "s3",
-        title: "Mr. Greek",
-        image: mrgreekSaladImage,
-        ingredients: "Tomat, agurk, chili, feta, oliven, salat-mix, olivenolje",
-        price: "119",
-    },
-    {
-        id: "s4",
-        title: "Proscuitto-salat",
-        image: proscuittoSaladImage,
-        ingredients: "Proscuitto, salat-mix, parmesan, cherrytomat, basilikum, basilikum-saus",
-        price: "139",
-    },
-    {
-        id: "s5",
-        title: "Kalkun-salat",
-        image: turkeySaladImage,
-        ingredients: "Karamellisert kalkun, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
-        price: "149"
-    },
-    {
-        id: "s6",
-        title: "Kylling-salat",
-        image: turkeySaladImage,
-        ingredients: "Karamellisert kylling, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
-        price: "139"
-    },
+	{
+		id: "s1",
+		title: "Caesar the Great",
+		image: caesarthegreatSaladImage,
+		ingredients: "Kyllingfilet, tomat, salat-mix, egg, parmesan, caesar-saus",
+		price: "139",
+	},
+	{
+		id: "s2",
+		title: "Wakame-salat",
+		image: wakamesalatSaladImage,
+		ingredients: "Wakame-salat, nøttesaus, sesamfrø",
+		price: "69",
+	},
+	{
+		id: "s3",
+		title: "Mr. Greek",
+		image: mrgreekSaladImage,
+		ingredients: "Tomat, agurk, chili, feta, oliven, salat-mix, olivenolje",
+		price: "119",
+	},
+	{
+		id: "s4",
+		title: "Proscuitto-salat",
+		image: proscuittoSaladImage,
+		ingredients: "Proscuitto, salat-mix, parmesan, cherrytomat, basilikum, basilikum-saus",
+		price: "139",
+	},
+	{
+		id: "s5",
+		title: "Kalkun-salat",
+		image: turkeySaladImage,
+		ingredients: "Karamellisert kalkun, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
+		price: "149"
+	},
+	{
+		id: "s6",
+		title: "Kylling-salat",
+		image: turkeySaladImage,
+		ingredients: "Karamellisert kylling, cherrytomat, salat-mix, appelsinbiter, caesar-saus",
+		price: "139"
+	},
 ];
 
 const SaladStorage = () => {
 
-    const [salads, setSalads] = useState(INITIAL_SALADS);
+	const [salads] = useState(INITIAL_SALADS);
 
-    return (
-        <MenuItemPrint items={salads}/>
-    );
+	return (
+		<MenuItemPrint items={salads}/>
+	);
 }
 
 export default SaladStorage;
