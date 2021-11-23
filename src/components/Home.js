@@ -36,7 +36,8 @@ export default function RecipeReviewCard() {
         <Container maxWidth="md" style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            marginBottom: '450px'
         }}>
             <Card sx={{ position: 'relative', width: '100%', flexDirection: 'column', display: 'flex', maxWidth: 678, mt: 20 }}>
                 <CardHeader

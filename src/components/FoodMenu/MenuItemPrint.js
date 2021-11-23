@@ -1,6 +1,7 @@
 import MenuItemCard from "./MenuItemCard.js";
 import {makeStyles} from "@material-ui/styles";
 import SideBar from "../SideBar.js";
+import {Container} from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
 	menuPrint: {
