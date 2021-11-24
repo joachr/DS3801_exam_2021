@@ -79,7 +79,7 @@ const MobileCart = () => {
 		emptyCart,
 	} = useCart();
 
-	if (isEmpty) return <Typography variant={"h5"}>Fitta er tom</Typography>
+	if (isEmpty) return <Typography variant={"h5"}>Handlekurven er tom</Typography>
 
 	return (
 
