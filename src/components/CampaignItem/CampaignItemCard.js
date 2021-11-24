@@ -68,7 +68,7 @@ const useStyleMobileCardElement = makeStyles(() => ({
 const useStyleMobileTextElements = makeStyles(() => ({
 	mobileTextElements: {
 		position: "absolute",
-		bottom: "70px",
+		bottom: "85px",
 		textAlign: "right",
 		width: "50%",
 		left: "50%",
@@ -81,7 +81,7 @@ const useStyleMobileButtonElements = makeStyles(() => ({
 		textAlign: "right",
 		height: "50%",
 		width: "50%",
-		top: "60%",
+		top: "70%",
 		left: "50%",
 	},
 }));
@@ -90,7 +90,7 @@ const useStyleMobilePriceElement = makeStyles(() => ({
 	mobilePriceElement: {
 		position: "absolute",
 		bottom: "53px",
-		right: "30%",
+		right: "1%",
 	}
 }));
 
