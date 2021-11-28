@@ -27,10 +27,13 @@ function Header({func1, func2}) {
 		<div>
 			<AppBar className={header}><Toolbar style={{
 				position: 'relative',
+				display: "flex",
 				alignItems: 'right',
 				justifyContent: 'right',
 				backgroundColor: '#FFD148',
 				height: '4.5rem',
+				width: "98%",
+
 			}}>
 				<IconButton component={Link} to="/" size="large" aria-label="menu" sx={{mr: 'auto'}}>
 					<FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>

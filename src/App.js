@@ -42,7 +42,7 @@ function App() {
 	const handleCloseCart = () => setOpenCart(false);
 
 	return (
-		<div className={App}>
+		<div style={{width: "100%", height: "100vh"}}>
 			<ThemeProvider theme={theme}>
 				<CartProvider>
 					<Header func1={handleOpen} func2={handleOpenCart}/>
