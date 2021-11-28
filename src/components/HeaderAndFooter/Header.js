@@ -51,7 +51,7 @@ function Header({func1, func2}) {
 					<FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
 
 
-					{isMatchMobile ? <Typography/> : (
+					{isMatchTablet ? <Typography/> : (
 						<Typography style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
 						            component="div">
 							Pizzeria Bella
