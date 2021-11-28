@@ -20,7 +20,7 @@ const useStyleSidebar = makeStyles(() => ({
 		position: "sticky",
 		display: "flex",
 		justifyContent: "center",
-		alignSelf: "flex-start",
+		alignSelf: "center",
 		top: "45px",
 		zIndex: '1'
 	}

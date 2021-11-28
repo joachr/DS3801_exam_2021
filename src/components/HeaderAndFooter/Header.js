@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
+import {createTheme} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
 	header: {
@@ -19,29 +20,40 @@ const useStyles = makeStyles(() => ({
 
 
 function Header({func1, func2}) {
+
+	const theme = createTheme({
+		breakpoints: {
+			values: {
+				mobile: 550,
+				tablet: 750,
+				laptop: 1024,
+				desktop: 1200,
+			},
+		},
+	});
+
 	const {header} = useStyles();
-	const theme = useTheme();
-	const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+	const isMatchTablet = useMediaQuery(theme.breakpoints.down("tablet"));
+	const isMatchMobile = useMediaQuery(theme.breakpoints.down("mobile"));
+
+	//FIXME legg på egne knapper for mobil, se på burger meny muligheter evt
 
 	return (
-		<div>
-			<AppBar className={header}><Toolbar style={{
+		<div style={{width: "100%"}}>
+			<AppBar className={header}>
+				<Toolbar style={{
 				position: 'relative',
-				display: "flex",
-				alignItems: 'right',
-				justifyContent: 'right',
 				backgroundColor: '#FFD148',
 				height: '4.5rem',
-				width: "98%",
 
 			}}>
 				<IconButton component={Link} to="/" size="large" aria-label="menu" sx={{mr: 'auto'}}>
 					<FoodBankIcon style={{fontSize: '70px', color: '#004f46'}}/>
 
 
-					{isMatch ? <Typography/> : (
+					{isMatchMobile ? <Typography/> : (
 						<Typography style={{font: "'Zen Maru Gothic', sans-serif", fontSize: '30px', fontWeight: 'bold'}}
-						            component="div" sx={{mr: 'auto'}}>
+						            component="div">
 							Pizzeria Bella
 						</Typography>)}
 
@@ -57,12 +69,11 @@ function Header({func1, func2}) {
 					<Fab style={{backgroundColor: '#006357'}} onClick={func2}>
 						<ShoppingCartOutlinedIcon fontSize="large" style={{
 							color: 'white',
-							marginLeft: '0.5em',
-							marginRight: '0.5em'
 						}}/>
 					</Fab>
 				</Badge>
-			</Toolbar></AppBar>
+			</Toolbar>
+			</AppBar>
 		</div>
 	);
 }
