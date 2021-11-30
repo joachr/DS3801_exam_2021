@@ -1,24 +1,15 @@
-import {makeStyles} from "@material-ui/styles";
 import SideBar from "../SideBar/SideBar.js";
 import MenuItemCard from "./MenuItemCard.js";
-
-const useStyles = makeStyles(() => ({
-	menuPrint: {
-		position: "relative",
-		display: "flex",
-		flexWrap: "wrap",
-		top: "8rem",
-	},
-}));
+import styles from './css/menu.module.css';
+import React from "react";
 
 const MenuItemPrint = (props) => {
 
-	const {menuPrint} = useStyles();
 
 	return (
 		<div style={{display: "flex", flexDirection: "column"}}>
 			<SideBar/>
-			<div className={menuPrint}>
+			<div className={styles.menuItemPrint}>
 
 				{props.items.map((item) => (
 					<MenuItemCard title={item.title}

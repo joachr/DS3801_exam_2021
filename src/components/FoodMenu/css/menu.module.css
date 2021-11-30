@@ -1,0 +1,126 @@
+.menuItemPrint {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    top: 8rem;
+}
+
+.cardElement {
+    padding: 0.4rem;
+    margin: 0.4rem;
+    width: 100%;
+}
+
+.buttonElement {
+    position: absolute;
+    text-align: right;
+    height: 50%;
+    width: 100%;
+    top: 70%;
+    left: 30%;
+}
+
+.priceElement {
+    position: absolute;
+    bottom: 5rem;
+    left: 10rem;
+}
+
+.textElement {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+}
+
+.cardItem {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.cardContent {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quantitySpan {
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.addToCartButton {
+    margin: 0.2em;
+    width: 20%;
+}
+
+
+
+@media (min-width: 500px) {
+    .cardElement {
+        display: flex;
+        position: relative;
+        padding: 1rem;
+        margin: 1rem;
+        width: 100%;
+    }
+
+
+    .buttonElement {
+        position: absolute;
+        text-align: right;
+        height: 50%;
+        width: 50%;
+        top: 80%;
+        left: 50%;
+    }
+
+    .addToCartButton {
+        margin: 1em;
+        width: 30%;
+    }
+
+    .priceElement {
+        position: absolute;
+        bottom: 9rem;
+        left: 71%;
+        height: 3.2rem;
+    }
+
+    .textElement {
+        position: absolute;
+        text-align: right;
+        height: 50%;
+        width: 45%;
+        left: 50%;
+    }
+
+    .cardItem {
+        position: relative;
+        display: flex;
+        flex: 1 1 30%;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

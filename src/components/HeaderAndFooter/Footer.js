@@ -10,9 +10,7 @@ function Footer() {
 	const theme = useTheme();
 	const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 	return (
-		<div style={{
-			marginTop: '250px'
-		}}>
+		<div>
 			{isMatch ?
 				<BottomNavigation style={{
 					position: 'fixed',

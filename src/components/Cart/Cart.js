@@ -131,7 +131,7 @@ const Cart = () => {
 					                                       kassen)</Typography>
 				</div>
 				<div style={{display: "flex", justifyContent: "center", position: "relative", marginTop: "10px"}}>
-					<Button size={"small"} onClick={() => emptyCart()} style={{
+					<Button size={"small"} onClick={() => emptyCart()} title={"Tøm handlevognen"} style={{
 						color: 'white',
 						backgroundColor: '#d36161',
 					}}>Tøm handlevognen</Button>
